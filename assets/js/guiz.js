@@ -5,15 +5,6 @@
 
 //we can add reagions etc and then from the test choose regien and type of holidays,use apis for suggesting hotels, flights, attractions ( if the place is not attraction
 //itself as its the case occasionally egClimb Fuji) ,also I noticed there is visa api in rapid apis which might be useful for some of the destinations
-
-
-
-
-
-
-
-
-
 const outcomes = [
     //outcome number one
     {

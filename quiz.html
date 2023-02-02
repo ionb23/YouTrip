@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,8 +13,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt="">
+           
             Bootstrap
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -40,95 +39,112 @@
     </nav>
 <!-- quiz layout porposal-->
 
-<article id="checkboxes" class="display w-75 ml-5 ">
-    
+<article id="checkboxes" class="display container-fluid ml-5 ">
+
+    <!--Heading and subheadings-->
+    <h2 class="text-center mt-3">Firstly...</h2>
+    <h3 class='text-center m-2'>Let us find your personality type!</h3>
+    <h4 class="text-center mb-5">These characteristics describe me...</h4> 
+    <!--Headings end-->
+    <!--first row of checkboxes-->
     <section class="row">
         <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="impulsive" class="choleric" >
+        <input type="checkbox" id="impulsive" name="choleric" >
         <label for="impulsive">Impulsive</label>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6"">
-        <input type="checkbox" id="practical" class="choleric" >
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="practical" name="choleric" >
         <label for="practical">Practical</label>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="unabletorelax" class="choleric" >
+        <input type="checkbox" id="unabletorelax" name="choleric" >
         <label for="unabletorelax">Unable to relax</label>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="passionate" class="choleric" >
+        <input type="checkbox" id="passionate" name="choleric" >
         <label for="passionate">Passionate</label>
     </div>
     </section>
-
+    <!--first row end-->
+    <!-- second row of checkboxes-->
     <section class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-    <input type="checkbox" id="considerate" class="melancholic" >
+    <input type="checkbox" id="considerate" name="melancholic" >
     <label for="considerate">Considerate</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="perfectionist" class="melancholic" >
+        <input type="checkbox" id="perfectionist" name="melancholic" >
         <label for="perfectionist">Perfectionist</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="organised" class="melancholic" >
+        <input type="checkbox" id="organised" name="melancholic" >
         <label for="organised">Organised</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="pessimist" class="melancholic" >
+        <input type="checkbox" id="pessimist" name="melancholic" >
         <label for="pessimist">Pessimistic</label>
     </div>
     </section>
+    <!--secon end-->
+    <!--third row of checkboxes-->
     <section class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="sociable" class="sanguine" >
+        <input type="checkbox" id="sociable" name="sanguine" >
         <label for="sociable">Sociable</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="forgetful" class="sanguine" >
+        <input type="checkbox" id="forgetful" name="sanguine" >
         <label for="sanguine">Forgetful</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="outgoing" class="sanguine" >
+        <input type="checkbox" id="outgoing" name="sanguine" >
         <label for="outgoing">Outgoing</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="loud" class="sanguine" >
+        <input type="checkbox" id="loud" name="sanguine" >
         <label for="loud">Loud</label>
     </div>
     </section>
+    <!--third row end-->
+    <!--fourth row of checkboxes-->
     <section class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="relaxed" class="phlegmatic" >
+        <input type="checkbox" id="relaxed" name="phlegmatic" >
         <label for="relaxed">Relaxed</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="sarcastic" class="phlegmatic" >
+        <input type="checkbox" id="sarcastic" name="phlegmatic" >
         <label for="sarcastic">Sarcastic</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="peacemaking" class="phlegmatic" >
+        <input type="checkbox" id="peacemaking" name="phlegmatic" >
         <label for="peacemaking">Peacemaking</label>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-        <input type="checkbox" id="undisciplined" class="phlegmatic" >
+        <input type="checkbox" id="undisciplined" name="phlegmatic" >
         <label for="undisciplined">Undisciplined</label>
     </div>
     </section>
+    <!--row end-->
+    <!--centered button-->
     <div class="conatinare-fluid d-flex justify-content-center m-5">
     <button id="checkBtn">Next</button>
 </div>
 </article>
+<!--to be displayed after initial checkboxes
+will be hidden in original css-->
+
 <article id="quiz" class="hide">
+    <h2 class="text-center">Just few more information about yourself :)</h2>
     <section class="qustion">
       <!-- HERE questions will appear-->
         <div class='answers'>
@@ -147,8 +163,7 @@
 <!--quiz layout end-->
     <footer class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt="">
+           
             Bootstrap
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -173,7 +188,6 @@
         </div>
     </footer>
 
-    <!-- Retrieved data will be dumped here -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -190,3 +204,57 @@
 </body>
 
 </html>
+
+
+<!--
+I am including JS logic for retrieving checkboxes values and storing them in scoreobject to be used
+
+
+//declearing variables
+const checkboxesButton = $('#checkBtn');
+
+let scoreObject = {
+    choleric:0,
+    melancholic:0,
+    phlegmatic:0,
+    sanguine:0,
+}
+
+checkboxesButton.click(function(event) {
+
+    event.preventDefault();
+	let countCholeric = 0;
+	$('input[name="choleric"]:checked').each(function() {
+			countCholeric++;
+		});
+
+    let countMelancholic = 0;
+    $('input[name="melancholic"]:checked').each(function() {
+             countMelancholic++;
+         });
+        
+            
+    let countPhlegmatic = 0;
+	$('input[name="phlegmatic"]:checked').each(function() {
+        countPhlegmatic++;
+		});
+        
+    let countSanguine = 0;
+	$('input[name="sanguine"]:checked').each(function() {
+			countSanguine++;
+		});
+scoreObject = {
+    choleric: countCholeric,
+    melancholic: countMelancholic,
+    phlegmatic: countPhlegmatic,
+    sanguine: countPhlegmatic,
+}	
+
+
+});
+
+
+
+
+
+-->
