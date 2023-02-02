@@ -1,0 +1,27 @@
+.carouselCard {
+
+    /* position: absolute; */
+    margin: 0 auto;
+    margin-top: -300px !important;
+    
+}
+
+.resultsCards {
+    justify-content: space-around;
+}
+
+.resultsContainer {
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultsHeader {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    background-color: aqua;
+}
