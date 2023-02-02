@@ -1,17 +1,14 @@
-//this is proposal of possible outcomes, I am not well travelled so feel free to adjust it however u see fit,just think array like this could be useful even for creating the test itself
-//there are these types of holidays : adventure(climbing mounting on rafting possibilitties on the spot), cultural (historical-ish places), escape (nature,countryside)
+//this is proposal of possible outcomes, I am not well travelled so feel free to adjust it however u see fit,just think array like this could be 
+//useful even for creating the test itself
+//there are these types of holidays : adventure(climbing mounting on rafting possibilitties on the spot), cultural (historical-ish places), 
+//escape (nature,countryside)
 //beach ,citybreak
-//I didn managed to actually associate some eco holidays with any of the destination but I think it still would be possible if we want Ecoholidays as posiible outcome
+//I didn managed to actually associate some eco holidays with any of the destination but I think it still would be possible if we 
+//want Ecoholidays as posiible outcome
 
-//we can add reagions etc and then from the test choose regien and type of holidays,use apis for suggesting hotels, flights, attractions ( if the place is not attraction
+//we can add reagions etc and then from the test choose regien and type of holidays,use apis for suggesting hotels, flights, 
+//attractions ( if the place is not attraction
 //itself as its the case occasionally egClimb Fuji) ,also I noticed there is visa api in rapid apis which might be useful for some of the destinations
-
-
-
-
-
-
-
 
 
 const outcomes = [
@@ -82,7 +79,7 @@ const outcomes = [
     },
     //oucome 8
     {
-        budget:'high',git pull o
+        budget:'high',
         name: 'South Korea',
         places: {
             cityBreak: 'Seoul',

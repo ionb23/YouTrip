@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en-gb">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -38,38 +38,113 @@
             </ul>
         </div>
     </nav>
+<!-- quiz layout porposal-->
 
+<article id="checkboxes" class="display w-75 ml-5 ">
+    
+    <section class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="impulsive" class="choleric" >
+        <label for="impulsive">Impulsive</label>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6"">
+        <input type="checkbox" id="practical" class="choleric" >
+        <label for="practical">Practical</label>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="unabletorelax" class="choleric" >
+        <label for="unabletorelax">Unable to relax</label>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="passionate" class="choleric" >
+        <label for="passionate">Passionate</label>
+    </div>
+    </section>
 
-    <div class="">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/carousel-small-1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/carousel-small-2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/carousel-small-3.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-            </div>
-        </div>
+    <section class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <input type="checkbox" id="considerate" class="melancholic" >
+    <label for="considerate">Considerate</label>
     </div>
 
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="perfectionist" class="melancholic" >
+        <label for="perfectionist">Perfectionist</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="organised" class="melancholic" >
+        <label for="organised">Organised</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="pessimist" class="melancholic" >
+        <label for="pessimist">Pessimistic</label>
+    </div>
+    </section>
+    <section class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="sociable" class="sanguine" >
+        <label for="sociable">Sociable</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="forgetful" class="sanguine" >
+        <label for="sanguine">Forgetful</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="outgoing" class="sanguine" >
+        <label for="outgoing">Outgoing</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="loud" class="sanguine" >
+        <label for="loud">Loud</label>
+    </div>
+    </section>
+    <section class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="relaxed" class="phlegmatic" >
+        <label for="relaxed">Relaxed</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="sarcastic" class="phlegmatic" >
+        <label for="sarcastic">Sarcastic</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="peacemaking" class="phlegmatic" >
+        <label for="peacemaking">Peacemaking</label>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <input type="checkbox" id="undisciplined" class="phlegmatic" >
+        <label for="undisciplined">Undisciplined</label>
+    </div>
+    </section>
+    <div class="conatinare-fluid d-flex justify-content-center m-5">
+    <button id="checkBtn">Next</button>
+</div>
+</article>
+<article id="quiz" class="hide">
+    <section class="qustion">
+      <!-- HERE questions will appear-->
+        <div class='answers'>
+        <!--here answer buttons will appear-->
+        </div>
+    </section>
+
+</article>
 
 
 
 
 
 
+
+<!--quiz layout end-->
     <footer class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
@@ -97,7 +172,6 @@
             </ul>
         </div>
     </footer>
-
 
     <!-- Retrieved data will be dumped here -->
 
