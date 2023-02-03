@@ -1,12 +1,30 @@
-var userInput = prompt("What would you like to search?")
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": apiKey,
+		"X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
+	}
+};
 
-// const options = {method: 'GET', headers: {accept: 'application/json'}};
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
 
-// fetch('https://api.content.tripadvisor.com/api/v1/location/search?key=D542C01E25364D34A32E03BF959D82C3&searchQuery=London&language=en', options)
-//   .then(response => response.json())
-//   .then(response => console.log(response))
-//   .catch(err => console.error(err));
+const rules = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates?base_currency=USD&languagecode=en-us",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": apiKey,
+		"X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com"
+	}
+};
 
+<<<<<<< HEAD
 // Here we are building the URL we need to query the database
 var queryURL = "https://api.content.tripadvisor.com/api/v1/location/search?key=" + apiKeyTripadvisor + "&searchQuery=" + userInput + "&language=en"
 
@@ -56,5 +74,8 @@ $.ajax({
   url: "https://google-maps-geocoding.p.rapidapi.com/geocode/json?latlng=40.714224%2C-73.96145&language=en",
   method: 'GET'
 }).then(function (response) {
+=======
+$.ajax(rules).done(function (response) {
+>>>>>>> ca63844a793244eed2a161c2a0947829a8438f62
 	console.log(response);
 });
