@@ -76,3 +76,15 @@ personalityPage.toggleClass('hide')
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
   }
+  //write if else statement to make sure that the submit button function only runse
+  //when some checkboxes are ticked (try adding max) and both radios are ticked
+
+  //logic for preferencial part of quiz
+  //4 outcomes then matches few countries
+  //add list of an world cousins , drop out and pick 
+//counte the results of the preferencial quiz and ssign group of countries
+//algorythm that will generate country with correct type of holidays and matching with test results randomly from possible all the possible outcomes
+
+
+
+

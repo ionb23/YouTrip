@@ -1,3 +1,9 @@
+//get quiz results from local storage
+//run the function to pick the place and dynamically create div that 
+
+//create appropriate api call for each suggestion card
+
+
 const settings = {
 	"async": true,
 	"crossDomain": true,
