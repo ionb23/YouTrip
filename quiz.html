@@ -39,14 +39,10 @@
     </nav>
 <!-- quiz layout porposal-->
 
-<article id="checkboxes" class="display container-fluid ml-5 ">
-
-    <!--Heading and subheadings-->
+<article id="checkboxes" class="display container-fluid ">
     <h2 class="text-center mt-3">Firstly...</h2>
     <h3 class='text-center m-2'>Let us find your personality type!</h3>
-    <h4 class="text-center mb-5">These characteristics describe me...</h4> 
-    <!--Headings end-->
-    <!--first row of checkboxes-->
+    <h4 class="text-center mb-5">Pick all characteristics that describe you...</h4> 
     <section class="row">
         <div class="col-lg-3 col-md-3 col-sm-6 col-6">
         <input type="checkbox" id="impulsive" name="choleric" >
@@ -65,8 +61,7 @@
         <label for="passionate">Passionate</label>
     </div>
     </section>
-    <!--first row end-->
-    <!-- second row of checkboxes-->
+
     <section class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
     <input type="checkbox" id="considerate" name="melancholic" >
@@ -88,8 +83,6 @@
         <label for="pessimist">Pessimistic</label>
     </div>
     </section>
-    <!--secon end-->
-    <!--third row of checkboxes-->
     <section class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
         <input type="checkbox" id="sociable" name="sanguine" >
@@ -111,9 +104,7 @@
         <label for="loud">Loud</label>
     </div>
     </section>
-    <!--third row end-->
-    <!--fourth row of checkboxes-->
-    <section class="row">
+    <section class="row" style="border-bottom: 2px solid black;">
     <div class="col-lg-3 col-md-3 col-sm-6 col-6">
         <input type="checkbox" id="relaxed" name="phlegmatic" >
         <label for="relaxed">Relaxed</label>
@@ -129,29 +120,41 @@
         <label for="peacemaking">Peacemaking</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6" >
         <input type="checkbox" id="undisciplined" name="phlegmatic" >
         <label for="undisciplined">Undisciplined</label>
     </div>
     </section>
-    <!--row end-->
-    <!--centered button-->
-    <div class="conatinare-fluid d-flex justify-content-center m-5">
-    <button id="checkBtn">Next</button>
-</div>
-</article>
-<!--to be displayed after initial checkboxes
-will be hidden in original css-->
+  <h4 class='text-center m-2'>Select more accurate option</h4>
+<section class="row radio p-5 text-center">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+    <h4>In challenging situations I </h4>
+<input type="radio" id="calm" name="stability" value="calm">
+<label for="calm">remain calm</label>
+<input type="radio" id="stressed" name="stability" value="stressed">
+<label for="stressed">get anxius</label>
+    </div>
 
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+    <h4>I gain energy by </h4>
+<input type="radio" id="introvert" name="openness" value="introvert">
+<label for="introvert">Staying by myself</label>
+<input type="radio" id="extrovert" name="openness" value="extrovert">
+<label for="extrovert">talking to others sharing problems</label>
+    </div>
+</section>
+<div class="conatinare-fluid d-flex justify-content-center m-5">
+    <button id="checkBtn">Next</button>
+</article>
 <article id="quiz" class="hide">
-    <h2 class="text-center">Just few more information about yourself :)</h2>
     <section class="qustion">
       <!-- HERE questions will appear-->
         <div class='answers'>
         <!--here answer buttons will appear-->
         </div>
     </section>
-
+    
+    </div>
 </article>
 
 
@@ -199,62 +202,9 @@ will be hidden in original css-->
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/keys.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="./assets/js/quizLogic.js"></script>
 </body>
 
 </html>
 
 
-<!--
-I am including JS logic for retrieving checkboxes values and storing them in scoreobject to be used
-
-
-//declearing variables
-const checkboxesButton = $('#checkBtn');
-
-let scoreObject = {
-    choleric:0,
-    melancholic:0,
-    phlegmatic:0,
-    sanguine:0,
-}
-
-checkboxesButton.click(function(event) {
-
-    event.preventDefault();
-	let countCholeric = 0;
-	$('input[name="choleric"]:checked').each(function() {
-			countCholeric++;
-		});
-
-    let countMelancholic = 0;
-    $('input[name="melancholic"]:checked').each(function() {
-             countMelancholic++;
-         });
-        
-            
-    let countPhlegmatic = 0;
-	$('input[name="phlegmatic"]:checked').each(function() {
-        countPhlegmatic++;
-		});
-        
-    let countSanguine = 0;
-	$('input[name="sanguine"]:checked').each(function() {
-			countSanguine++;
-		});
-scoreObject = {
-    choleric: countCholeric,
-    melancholic: countMelancholic,
-    phlegmatic: countPhlegmatic,
-    sanguine: countPhlegmatic,
-}	
-
-
-});
-
-
-
-
-
--->
