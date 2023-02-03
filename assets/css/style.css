@@ -1,9 +1,35 @@
+/* PROJECT COLOUR VARIABLES */
+:root {
+
+    --main-color: #0081A7;
+    --second-color: #b8d5b8;
+}
+
+
+#navbar {
+ background-color: var(--main-color);
+ color: black;
+ justify-content: space-around;
+ height: 80px;
+ padding: 0 55px;
+ position: sticky;
+ 
+}
+
+#navbarNav {
+    justify-content: flex-end;
+    
+}
+
+
+
+
 .carouselCard {
 
     /* position: absolute; */
     margin: 0 auto;
     margin-top: -300px !important;
-    
+
 }
 
 .resultsCards {
