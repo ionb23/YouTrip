@@ -247,7 +247,30 @@ function quizQuestions (order){
 
 function endPage(){
     quiz.empty();
+//HERE I am creating loading spinner from bootstrap
+    let positionDiv = $('<div>');
+    positionDiv.addClass('d-flex justify-content-center m-5')
+    let loadingDiv = $('<div>');
+    loadingDiv.addClass('spinner-border text-info').css('width','5rem').css('height','5rem').attr('role','status');
+    let loading = $('<span>');
+    loading.addClass('sr-only');
+    loadingDiv.append(loading);
+    positionDiv.append(loadingDiv);
+    quiz.append(positionDiv);
+    loadingTime(3)//this will redirect user to suggestion page after 3 seconds of watching spinner :D
 }
 
 
-//  HERE GOES ARRAY OF QUESTIONS
+
+
+
+
+
+//timer for loading function
+function loadingTime (time) {
+    let timerInterval = setInterval(function(){
+        time--;
+        if(time < 0){
+        window.location.replace('https://www.seznam.cz/')
+        clearInterval(timerInterval)
+} },1000)};
