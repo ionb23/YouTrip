@@ -9,8 +9,13 @@
 //we can add reagions etc and then from the test choose regien and type of holidays,use apis for suggesting hotels, flights, 
 //attractions ( if the place is not attraction
 //itself as its the case occasionally egClimb Fuji) ,also I noticed there is visa api in rapid apis which might be useful for some of the destinations
+// const europeanFood = []
 
+// const southAsian = []
+// //season = [any, hot, cold]
+// const southAmerican = []
 
+// const middleEastern =[]
 const outcomes = [
     //outcome number one
     {
@@ -165,6 +170,9 @@ const outcomes = [
     {
         budget:'medium',
         name:'Mexico',
+        // food: southAmerican,
+        // drink: 'beer',
+        // season: hot,
         places:{
             culturalHolidays: 'Mexico City',
             escapeHolidays:'Pico De Orizaba'
@@ -174,6 +182,9 @@ const outcomes = [
     {
         budget:'medium',
         name: 'France',
+        // food: europeanFood,
+        // drink: 'wine',
+        // season: any,
         places: {
             cityBreak: 'Paris',
             adventureHolidays: 'Chamonix',
@@ -183,6 +194,9 @@ const outcomes = [
     //outcome 19
     {   budget: 'low',
         name: 'Spain',
+        // food: europeanFood,
+        // drink: 'wine',
+        // season: hot,
         places:{
             cityBreak: 'Barcelona',
             escapeHolidays:'Extremadura',
