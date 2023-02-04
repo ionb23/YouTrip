@@ -258,8 +258,33 @@ function endPage(){
     positionDiv.append(loadingDiv);
     quiz.append(positionDiv);
     loadingTime(3)//this will redirect user to suggestion page after 3 seconds of watching spinner :D
+    findResult(destinationResultArray)
 }
 
+//function to count final result of preferences quiz
+function findResult(arr) {
+    let nat = [];
+    let his = [];
+    let cul = [];
+    //i looped through results array and created 3 arrays then compared their length to fin result
+for (let i=0 ; i<arr.length; i++){
+if(arr[i]=='nature'){
+    nat.push(arr[i])
+}else if(arr[i]=='history'){
+    his.push(arr[i])
+}else {
+    cul.push(arr[i])
+}
+}
+//final results are stored in local storage to access on suggestion website
+if (nat.length >= his.length && nat.length >=cul.length){
+    localStorage.setItem('Destination','nature')
+} else if (his.length >= cul.length && his.length >=nat.length ){
+    localStorage.setItem('Destination','history')
+}else {
+    localStorage.setItem('Destination','culture')
+}
+}
 
 
 
