@@ -24,7 +24,6 @@ const rules = {
 	}
 };
 
-<<<<<<< HEAD
 // Here we are building the URL we need to query the database
 var queryURL = "https://api.content.tripadvisor.com/api/v1/location/search?key=" + apiKeyTripadvisor + "&searchQuery=" + userInput + "&language=en"
 
@@ -74,8 +73,5 @@ $.ajax({
   url: "https://google-maps-geocoding.p.rapidapi.com/geocode/json?latlng=40.714224%2C-73.96145&language=en",
   method: 'GET'
 }).then(function (response) {
-=======
-$.ajax(rules).done(function (response) {
->>>>>>> ca63844a793244eed2a161c2a0947829a8438f62
 	console.log(response);
 });
