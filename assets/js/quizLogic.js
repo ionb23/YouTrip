@@ -278,11 +278,11 @@ if(arr[i]=='nature'){
 }
 //final results are stored in local storage to access on suggestion website
 if (nat.length >= his.length && nat.length >=cul.length){
-    localStorage.setItem('Destination','nature')
+localStorage.setItem('Destination',JSON.stringify(nature))
 } else if (his.length >= cul.length && his.length >=nat.length ){
-    localStorage.setItem('Destination','history')
+    localStorage.setItem('Destination',JSON.stringify(history))
 }else {
-    localStorage.setItem('Destination','culture')
+    localStorage.setItem('Destination',JSON.stringify(culture))
 }
 }
 

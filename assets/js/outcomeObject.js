@@ -19,20 +19,21 @@
 const outcomes = [
     //outcome number one
     {
-    budget: 'low',
     name: 'Czech Republic',
     places: {
-        cityBreak: 'Prague',
-        culturalHolidays: 'Cesky Krumlov',
-        escapeHolidays: 'South Moravia',
+        'choleric': ['Prague','City break'],
+        'sanguine': ['Cesky Krumlov','Explore history and culture'],
+        'phlegmatic': ['South Moravia','Escape holiday'],
+        'melancholic': ['South Moravia','Escape holiday'],
     }},
     //outcome number two
     {
-    budget: 'low',
     name: 'Indonesia',
     places: {
-        beachHolidays: 'Yogyakarta',
-        adventureHolidays: 'Bali'
+        'choleric': ['Bali','City break'],
+        'sanguine': ['Raja Ampat','Adveturous holidays'],
+        'phlegmatic': ['Yogyakarta','Beach holidays'],
+       'melancholic': ['Yogyakarta','Beach holidays'],
     }
     },
     //outcome number three
@@ -40,167 +41,178 @@ const outcomes = [
         budget:'low',
         name:'Croatia',
         places:{
-        escapeHolidays: 'Krka National Park';
-        beachHolidays: 'Dubrovnik'
+        'choleric': ['Split','City break'],
+        'sanguine': ['Split','City break'],
+        'phlegmatic': ['Nos Kalik','Escape holidays'],
+        'melancholic': ['Dubrovnik','Beach holidays'],
         }
 
     },
     //outcome number 4 
     {
-        budget:'medium',
+    
         name:'India',
         places: {
-            cityBreak: 'Mumbay',
-            culturalHolidyas: 'Amrisatar',
+            'choleric': ['Mumbay','Ctiy break'],
+            'sanguine':[ 'Amrisatar','Explore history and culture'],
+            'melancholic':['Zanskar', 'Escape holidays'],
+            'phlegmatic':['Goa','Beach Holidays']
         }
     },
     //outcome nbumber 5
     {
-        buget:'high',
         name:'UAE',
         places:{
-            cityBreak: 'Abu Dhabi',
-            beachHolidays: 'Fujairah'
+            'choleric': ['Abu Dabhi','Ctiy break'],
+            'sanguine':[ 'Dubai','City break'],
+            'melancholic':['Fujairah', 'Beach holidays'],
+            'phlegmatic':['Fujairaha','Beach Holidays']
         }
     },
     //outcome number 6
     {
-        budget: 'low',
         name:'Hungary',
         places:{
-            culturalHolidays: 'Budapest',
-            advetureHolidays: 'The Danube River'
+            'melancholic':['Budapest','Romantic holidays'],
+            'sanguine': ['The Danube River','Adventurous holidays'],
+            'choleric':['Budapest','City Break'],
+            'phlegmatic':['Egerszalók', 'Escape holidays']
 
         }
     },
     //outcome 7
     {
-        budget:'medium',
         name:'Netherlands',
         places:{
-            romantic: 'Ultrecht',
-            cityBreak: 'Amsterdam'
+            'choleric':['Amsterdam','City break'],
+            'phlegmatic':['Amsterdam'],
+            'melancholic':[ 'Amsterdam', 'Romantic holidays'],
+            'phlegmatic':['Kinderdijk', 'Escape holidays']
         }
     },
     //oucome 8
     {
-        budget:'high',
+  
         name: 'South Korea',
         places: {
-            cityBreak: 'Seoul',
-            escapeHolidays: 'Bukhansen mountains'
+            'choleric': ['Seoul','City Break'],
+            'sanguine': ['Seoul','City Break'],
+            'phlegmatic': ['Bukhansen mountains', 'Escape holidays'],
+            'melancholic':['Bukhansen mountains', 'Escape holidays'],
         }
     },
     //outcome 9
     {
-       budget: 'low',
        name: 'Poland',
        places:{
-        culturalHolidays: 'Krakow',
-        cityBreak:'Warsaw'
+        'sanguine':['Krakow','Explore history and culture'],
+        'choleric': ['Krakow','Explore history and culture'],
+        'melancholic':['Krakow', 'Romantic holidays'],
+        'phlegmatic':['Gdańsk', 'Escape holidays']
        } 
     },
     //outcome 10
     {
-        budget:'high',
         name: 'Saudi Arabia',
         places:{
-          cityBreak:'Jeddah',
-            culturalHolidays:'Medina'
+            'choleric':['Jeddah', 'City Break'],
+            'sanguine':[' Al Balad ', 'Adventurous holidays'],
+            'phlegmatic':['Medina', 'Escape holidays'],
+            'melanchilic':['Dammam', 'Escape holidays']
         }
     },
     //outcome 11
     {
-        budget:'high',
+        //budget:'high',
         name:'Canada',
         places:{
-            cityBreak: 'Toronto',
-            adventureHolidays:'Whistler',
+            'choleric':['Toronto','City Break'],
+            'sanguine':['Whistler','Adventurous holidays'],
+            'melancholic':['Yellowknife', 'Escape holidays'],
+            'phlegmatic':['Halifax', 'Escape Holidays']
         }
     },
     //outcome 12
     {
-        budget:'high',
+        //budget:'high',
         name :'Japan',
         places: {
-            cityBreak: 'Tokyo',
-            escapeHolidays: 'Yakushima',
-            adventureHolidays:'Climb Fuji'
+        'choleric': ['Tokyo','City break'],
+        'phlegmatic':['Yakushima','Escape holidays'],
+        'melancholic':['Yakushima','Escape holidays'],
+        'sanguine':['Fujiyoshida','Adventurous holidays']
         }
     },
     //outcome 13
     {
-        budget:'medium',
         name:'Greece',
         places: {
-            culturalHolidays: 'Athens',
-            beachHolidays: 'Crete'
+            'choleric':['Athens','Explore history and culture'],
+            'sanguine':['Athens','Explore history and culture'],
+            'melanchilic':[ 'Crete', 'Beach holidays'],
+            'phlegmatic':[ 'Crete', 'Beach holidays'],
         }
     },
     //outcome 14
     {
-        budget:'medium',
         name:'Malaysia',
         places:{
-            cityBreak:'Penang',
-            beachHolidays:'Perhentian Islands'
+            'choleric':['Penang', 'City break'],
+            'sanguins':['Penang', 'City break'],
+            'phlegmatic':['Perhentian Islands','BeachHolidays'],
+            'melanchilic':['Perhentian Islands','BeachHolidays'],
 
         }
     },
     //outcome 15
     {
-        budget:'medium',
         name:'Austria',
         places:{
-            cityBreak: 'Vieanna',
-            culturalHolidays: 'Fortress Hohensalzburg'
+            'choleric':['Vienna', 'Explore history and culture'],
+            'melanchilic':['Vienna','Romantic holidays'],
+            'sanguine': ['Vienna', 'City break'],
+            'phlegmatic': ['Vienna','Romantic Holidays']
         }
 ,
     },
     //outcome 16
     {
-        budget:'medium',
         name:'Turkey',
         places:{
-            beachHoliday:'Antalya',
-            culturalHolidays: 'Istanbul'
-        }
-    },
+            'melancholic':['Antalya','Beach holiday'],
+            'phlegmatic':['Antalya','Beach holiday'],
+            'choleric': ['Istanbul','Explore history and culture'],
+            'sanguine':['Istanbul','Explore history and culture'],
+    }},
     //outcome 17
     {
-        budget:'medium',
         name:'Mexico',
-        // food: southAmerican,
-        // drink: 'beer',
-        // season: hot,
         places:{
-            culturalHolidays: 'Mexico City',
-            escapeHolidays:'Pico De Orizaba'
+            'sanguine':['Mexico City','Explore history and culture'],
+            'choleric':['Mexico City','Explore history and culture'],
+            'melancholic':['Pico De Orizaba','Escape holidays'],
+            'phlegmatic': ['Pico De Orizaba','Escape holidays'],
         }
     },
     //outcome 18
     {
-        budget:'medium',
         name: 'France',
-        // food: europeanFood,
-        // drink: 'wine',
-        // season: any,
+
         places: {
-            cityBreak: 'Paris',
-            adventureHolidays: 'Chamonix',
-            escapeHolidays:'Bordeaus'
+            'choleric': ['Paris','City break'],
+            'sanguine':['Chamonix','Adventurous holidays'],
+            'phlegmatic':['Bordeaus','Escape holidays'],
+            'melancholic':['Bordeaus','Escape holidays'],
         }
     },
     //outcome 19
-    {   budget: 'low',
+    {  
         name: 'Spain',
-        // food: europeanFood,
-        // drink: 'wine',
-        // season: hot,
         places:{
-            cityBreak: 'Barcelona',
-            escapeHolidays:'Extremadura',
-            beachHolidays: 'San Sebastian'
+            'choleric':['Barcelona','City break'],
+            'phlegmatic':['Extremadura','Escape holidays'],
+            'melancholic': ['San Sebastian','Beach Holidays'],
+            'sanguine':['Barcelona', 'City Break']
         }
     }
 ]
