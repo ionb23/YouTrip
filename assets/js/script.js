@@ -4,7 +4,7 @@ const settings = {
 	"url": "https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended",
 	"method": "GET",
 	"headers": {
-		"X-RapidAPI-Key": apiKey,
+		"X-RapidAPI-Key": apiKeyTravelAdvisor,
 		"X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
 	}
 };
