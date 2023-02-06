@@ -113,11 +113,15 @@ body {
     box-shadow: 0 2px 10px #00000055;
     /* transition: all 0.3s ease-in-out; */
 }
+.takeQuizButton:hover{
+    transform: scale(1.25) perspective(1px);
+}
 
 
 .takeQuizButton a {
     text-decoration: none !important;
     color: #FFFFFF !important;
+    
 }
 
 

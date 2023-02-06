@@ -39,7 +39,6 @@ for(let i =0; i <outcomes.length; i++ ){
 
 
 
-
 // {
 //     name: 'Czech Republic',
 //     places: {
