@@ -1,4 +1,8 @@
 /* PROJECT COLOUR VARIABLES */
+
+/* check front page hover issue */
+/* check front page nav bar buttons color contrast */
+
 :root {
 
     --main-color: #0081A7;
@@ -104,7 +108,6 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-
 }
 
 .takeQuizButton {

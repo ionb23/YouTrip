@@ -13,7 +13,7 @@ const askThis = [
             answ: 'scifi, marvel, action',
             addTo: 'culture',
         },
-    picture: 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    picture: 'assets/images/quiz-images/movies.jpg',
     },
     //
     { question: 'What is your favourite season',
@@ -29,7 +29,7 @@ const askThis = [
         answ: 'summer',
         addTo: 'culture'
     },
-    picture: 'https://images.unsplash.com/photo-1588822149715-8394a8d709f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    picture: 'assets/images/quiz-images/season.jpg',
 },
 //
 { question: 'What is your favourite food?',
@@ -45,7 +45,7 @@ answC:{
     answ: 'I can eat all',
     addTo: 'nature',
 },
-picture: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+picture: 'assets/images/quiz-images/food.jpg',
 },
 //
 { question: 'What type of music do you like?',
@@ -61,7 +61,7 @@ answC:{
     answ: 'rock/metal',
     addTo: 'nature',
 },
-picture: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
+picture: 'assets/images/quiz-images/music.jpg',
 },
 //
 { question: 'What is your favourite drink?',
@@ -77,7 +77,7 @@ answC:{
     answ: 'pop',
     addTo: 'culture',
 },
-picture: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+picture: 'assets/images/quiz-images/drink.jpg',
 },
 //
 { question: 'What is your favourite book?',
@@ -93,7 +93,7 @@ answC:{
     answ: 'historical',
     addTo: 'history',
 },
-picture: 'https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+picture: 'assets/images/quiz-images/books.jpg',
 },
 //
 { question: 'Whats your style',
@@ -108,7 +108,7 @@ answB: {
 answC:{
     answ: 'comfy',
     addTo: 'nature',},
-    picture: 'https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    picture: 'assets/images/quiz-images/clothes.jpg',
 },
 ]
 //results for the preferencess quiz
@@ -235,6 +235,7 @@ function quizQuestions (order){
     questionCard.addClass('card m-5 outerCard rounded d-flex')
     let picture = $('<img>');
     picture.attr('src', currentPic).addClass('questionPicture').attr('alt','..');
+    picture.css('object-fit',"cover");
     let cardBody = $('<div>');
     cardBody.addClass('card-body cardBody')
     let question = $('<h5>');
