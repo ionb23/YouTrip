@@ -225,19 +225,19 @@ function quizQuestions (order){
 
     quiz.removeClass('hide')
     let questionCard =$('<div>');
-    questionCard.addClass('card').addClass('card m-5')
+    questionCard.addClass('card m-5 outerCard rounded d-flex')
     let picture = $('<img>');
-    picture.attr('src', "./assets/images/budgetQuestion.jpg");
+    picture.attr('src', "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg").addClass('questionPicture');
     let cardBody = $('<div>');
-    cardBody.addClass('card-body')
+    cardBody.addClass('card-body cardBody')
     let question = $('<h5>');
     question.addClass('card-title text-center').text(askThis[order].question);
     let answerOne = $('<button>')
-    answerOne.addClass('btn btn-danger m-3 answ').attr('id',askThis[order].answA.addTo).text(askThis[order].answA.answ).css('display','block')
+    answerOne.addClass('btn m-3 answ').attr('id',askThis[order].answA.addTo).text(askThis[order].answA.answ).css('display','block')
     let answerTwo = $('<button>')
-    answerTwo.addClass('btn btn-info m-3 answ').attr('id',askThis[order].answB.addTo).text(askThis[order].answB.answ).css('display','block')
+    answerTwo.addClass('btn m-3 answ').attr('id',askThis[order].answB.addTo).text(askThis[order].answB.answ).css('display','block')
     let answerThree = $('<button>')
-    answerThree.addClass('btn btn-warning m-3 answ').attr('id',askThis[order].answC.addTo).text(askThis[order].answC.answ).css('display','block')
+    answerThree.addClass('btn m-3 answ').attr('id',askThis[order].answC.addTo).text(askThis[order].answC.answ).css('display','block')
 
     cardBody.append(question, answerOne, answerTwo, answerThree)
     questionCard.append(picture, cardBody)
@@ -296,6 +296,6 @@ function loadingTime (time) {
     let timerInterval = setInterval(function(){
         time--;
         if(time < 0){
-        window.location.replace('https://www.seznam.cz/')
+        window.location.replace('./testing-api.html')
         clearInterval(timerInterval)
 } },1000)};
