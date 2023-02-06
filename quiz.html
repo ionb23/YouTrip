@@ -2,7 +2,18 @@
 <html lang="en-gb">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="./quizStyle.css">
+<!--fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<!--custom stylesheet-->
+<link rel="stylesheet" type="text/css" href="./assets/css/quizStyle.css">
+
 <head>
     <meta charset="utf-8">
     <title>Test website</title>
@@ -10,10 +21,11 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-           
-            Bootstrap
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <a class="navbar-brand main-nav" href="#">
+            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top" alt=""> -->
+            Personal Holidays
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,123 +37,125 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Suggestions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">Log-in</a>
                 </li>
             </ul>
         </div>
     </nav>
 <!-- quiz layout porposal-->
 
-<article id="checkboxes" class="display container-fluid ">
+<article id="checkboxes" class="display container mt-5 p-3">
     <h2 class="text-center mt-3">Firstly...</h2>
     <h3 class='text-center m-2'>Let us find your personality type!</h3>
-    <h4 class="text-center mb-5">Pick all characteristics that describe you...</h4> 
-    <section class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <p class="text-center mb-5">Pick all characteristics that describe you...</p> 
+    <section class="row ml-5">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="impulsive" name="choleric" >
         <label for="impulsive">Impulsive</label>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="practical" name="choleric" >
         <label for="practical">Practical</label>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="unabletorelax" name="choleric" >
         <label for="unabletorelax">Unable to relax</label>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="passionate" name="choleric" >
         <label for="passionate">Passionate</label>
     </div>
     </section>
 
-    <section class="row">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <section class="row ml-5">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
     <input type="checkbox" id="considerate" name="melancholic" >
     <label for="considerate">Considerate</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="perfectionist" name="melancholic" >
         <label for="perfectionist">Perfectionist</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="organised" name="melancholic" >
         <label for="organised">Organised</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="pessimist" name="melancholic" >
         <label for="pessimist">Pessimistic</label>
     </div>
     </section>
-    <section class="row">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <section class="row ml-5">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="sociable" name="sanguine" >
         <label for="sociable">Sociable</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="forgetful" name="sanguine" >
         <label for="sanguine">Forgetful</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="outgoing" name="sanguine" >
         <label for="outgoing">Outgoing</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="loud" name="sanguine" >
         <label for="loud">Loud</label>
     </div>
     </section>
-    <section class="row" style="border-bottom: 2px solid black;">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <section class="row ml-5">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="relaxed" name="phlegmatic" >
         <label for="relaxed">Relaxed</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="sarcastic" name="phlegmatic" >
         <label for="sarcastic">Sarcastic</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check">
         <input type="checkbox" id="peacemaking" name="phlegmatic" >
         <label for="peacemaking">Peacemaking</label>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-6" >
+    <div class="col-lg-3 col-md-3 col-sm-6 col-6 check" >
         <input type="checkbox" id="undisciplined" name="phlegmatic" >
         <label for="undisciplined">Undisciplined</label>
     </div>
     </section>
-  <h4 class='text-center m-2'>Select more accurate option</h4>
+    <div id="bottomQ">
+  <h3 class='text-center mt-5 m-2'>Select one option to finish sentences</h3>
 <section class="row radio p-5 text-center">
     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-    <h4>In challenging situations I </h4>
+    <p>In challenging situations I: </p>
 <input type="radio" id="calm" name="stability" value="calm">
-<label for="calm">remain calm</label>
+<label for="calm">remain calm</label></br>
 <input type="radio" id="stressed" name="stability" value="stressed">
 <label for="stressed">get anxius</label>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-    <h4>I gain energy by </h4>
+    <p>I gain energy by: </p>
 <input type="radio" id="introvert" name="openness" value="introvert">
-<label for="introvert">Staying by myself</label>
+<label for="introvert">Staying by myself</label></br>
 <input type="radio" id="extrovert" name="openness" value="extrovert">
 <label for="extrovert">talking to others sharing problems</label>
     </div>
 </section>
+</div>
 <div class="conatinare-fluid d-flex justify-content-center m-5">
     <button id="checkBtn">Next</button>
     </div>
@@ -178,4 +192,3 @@
 </body>
 
 </html>
-

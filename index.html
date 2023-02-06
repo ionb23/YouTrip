@@ -5,9 +5,12 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--fonts-->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
 
 <head>
     <meta charset="utf-8">
@@ -15,11 +18,10 @@
 </head>
 
 <body>
-<!--
 
     <nav class="navbar navbar-expand-lg" id="navbar">
         <a class="navbar-brand main-nav" href="#">
-            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
+          <!--<img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
                 class="d-inline-block align-top" alt=""> -->
             Personal Holidays
         </a>
@@ -44,17 +46,20 @@
             </ul>
         </div>
     </nav>
+
+
+    <!-- changed img src and added data-interval and data-pause, although data-pause doesn't seem to work as intended. currently image cycling is paused when you hover directly over the image -->
     <div class="main-info">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/carousel-small-1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item active" data-interval="5000" data-pause=false>
+                    <img src="assets/images/bg-images/bg-image-1.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/images/carousel-small-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item" data-interval="5000" data-pause=false>
+                    <img src="assets/images/bg-images/bg-image-2.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/images/carousel-small-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item" data-interval="5000" data-pause=false>
+                    <img src="assets/images/bg-images/bg-image-3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
@@ -62,32 +67,32 @@
             <div class="card carouselCard" style="width: 34rem;">
                 <div class="card-body">
                     <h2 class="card-title">Find your perfect holiday!</h2>
-                    <p class="card-text">Not sure how to plan your getaway? Want a holiday that matches your
-                        personality?</p>
-                    <h3>Take the quiz below and find out more!</h3>
+
+                    <p class="card-text">Not sure how to plan your getaway?<br>
+                        Want a holiday that matches your personality?</p>
+                    <h3>Take the quiz below to get started</h3>
+
                 </div>
             </div>
             <button type="button" class="btn takeQuizButton">
                 <a href="./quiz.html">Take Quiz</a>
-                
+
             </button>
         </div>
     </div>
 
     <div class="jumbo-break">
-            <h3>LOCATION</h3>
-            <h3>HOTEL</h3>
-            <h3>ACTIVITES</h3>
+        <h3>LOCATION</h3>
+        <h3>HOTEL</h3>
+        <h3>ACTIVITES</h3>
     </div>
-
-
 
 
 
 
     <div class="container">
         <h2 id="results-title">
-            A holiday fit for your personality
+            A holiday fit for your <span id="big-results-title">personality</span> 
         </h2>
         <div class="row resultsCards">
             <div class="card" style="width: 18rem;">
