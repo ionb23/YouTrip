@@ -13,7 +13,7 @@ const askThis = [
             answ: 'scifi, marvel, action',
             addTo: 'culture',
         },
-    picture: 'url',
+    picture: 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
     },
     //
     { question: 'What is your favourite season',
@@ -29,7 +29,7 @@ const askThis = [
         answ: 'summer',
         addTo: 'culture'
     },
-    picture: 'url',
+    picture: 'https://images.unsplash.com/photo-1588822149715-8394a8d709f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 },
 //
 { question: 'What is your favourite food?',
@@ -45,7 +45,7 @@ answC:{
     answ: 'I can eat all',
     addTo: 'nature',
 },
-picture: 'url',
+picture: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
 },
 //
 { question: 'What type of music do you like?',
@@ -61,7 +61,7 @@ answC:{
     answ: 'rock/metal',
     addTo: 'nature',
 },
-picture: 'url',
+picture: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
 },
 //
 { question: 'What is your favourite drink?',
@@ -77,7 +77,7 @@ answC:{
     answ: 'pop',
     addTo: 'culture',
 },
-picture: 'url',
+picture: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
 },
 //
 { question: 'What is your favourite book?',
@@ -93,7 +93,7 @@ answC:{
     answ: 'historical',
     addTo: 'history',
 },
-picture: 'url',
+picture: 'https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
 },
 //
 { question: 'Whats your style',
@@ -108,14 +108,13 @@ answB: {
 answC:{
     answ: 'comfy',
     addTo: 'nature',},
-    picture: 'url',
+    picture: 'https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 },
 ]
 //results for the preferencess quiz
 const culture = ['Indonesia', 'India','UAE','South Korea','SaudiArabia','Greece', 'Malaysiya', 'Mexico'];
 const history = ['Czech Republic','Hungary','Netherlands','Poland','Austria','France','Spain'];
 const nature = ['Croatia','Canada', 'Japan','Turkey']
-
 
 
 //declearing variables
@@ -177,6 +176,9 @@ scoreObject = {
     sanguine: countSanguine,
 }
 
+let checked =countCholeric+countMelancholic+countPhlegmatic+countSanguine;
+console.log(checked)
+if(checked > 4 && opennessVal != undefined && stabilityVal != undefined){
 
 //getting result
 let numbersArr = Object.values(scoreObject)
@@ -191,6 +193,10 @@ localStorage.setItem('Personality', personality)
 //hiding page with checkboxes
 personalityPage.addClass('hide')
 quizQuestions(o)
+}else {
+        $( "#myModal").modal('show');
+
+}
 
 });
 
@@ -222,12 +228,13 @@ function getKeyByValue(object, value) {
 
 function quizQuestions (order){
     quiz.empty();
-
+    let currentPic = askThis[order].picture
     quiz.removeClass('hide')
     let questionCard =$('<div>');
+
     questionCard.addClass('card m-5 outerCard rounded d-flex')
     let picture = $('<img>');
-    picture.attr('src', "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg").addClass('questionPicture');
+    picture.attr('src', currentPic).addClass('questionPicture').attr('alt','..');
     let cardBody = $('<div>');
     cardBody.addClass('card-body cardBody')
     let question = $('<h5>');
@@ -238,6 +245,7 @@ function quizQuestions (order){
     answerTwo.addClass('btn m-3 answ').attr('id',askThis[order].answB.addTo).text(askThis[order].answB.answ).css('display','block')
     let answerThree = $('<button>')
     answerThree.addClass('btn m-3 answ').attr('id',askThis[order].answC.addTo).text(askThis[order].answC.answ).css('display','block')
+
 
     cardBody.append(question, answerOne, answerTwo, answerThree)
     questionCard.append(picture, cardBody)
@@ -296,6 +304,7 @@ function loadingTime (time) {
     let timerInterval = setInterval(function(){
         time--;
         if(time < 0){
+
         window.location.replace('./testing-api.html')
         clearInterval(timerInterval)
 } },1000)};

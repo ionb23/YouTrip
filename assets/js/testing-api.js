@@ -1,43 +1,7 @@
-let theChoice = ''
-let personality = localStorage.getItem('Personality')
-let city = '';
-let type ='';
-
-getCountry();
-findHolidays();
-
-function getCountry (){
-    
-let placeArray = JSON.parse(localStorage.getItem('Destination'));
-if(placeArray.length ==0){
-    return
-}else{
-theChoice = placeArray[Math.floor(Math.random() * placeArray.length)]
-}}
-
-let theCountry = '' //this will be randomly chosen out of array of possible countries
-
-
-function findHolidays(){
-for(let i =0; i <outcomes.length; i++ ){
-    if (outcomes[i].name == theChoice){
-        city = outcomes[i].places[personality][0]
-        type = outcomes[i].places[personality][1]
-        console.log(city)
-        console.log(type)
-    }
-}
-$('#results-title').text(`${type} in ${theChoice}`)
-$("#holiday-description").text(`For your ${personality} personality ${type} in ${theChoice} seems like the best choice! Check out how to make it happend`)
-
-}
-
-
-
+let cityToSearch = "Barcelona";
 let geoID = 0;
 let hotelID = "0";
 let restaurantID = "0";
-const apiKeyTravelAdvisor ='f72b817560msh85096028e95a534p1b3f97jsn0259ea03ef55'
 // let geoIDToSearch = 0;
 // let geoIDToSearch = 187497;
 
@@ -46,7 +10,7 @@ const apiKeyTravelAdvisor ='f72b817560msh85096028e95a534p1b3f97jsn0259ea03ef55'
 const autoComplete = {
     "async": true,
     "crossDomain": true,
-    "url": "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=" + city + "&lang=en_US&units=km",
+    "url": "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=" + cityToSearch + "&lang=en_US&units=km",
     "method": "GET",
     "headers": {
         "X-RapidAPI-Key": apiKeyTravelAdvisor,
