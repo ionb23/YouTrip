@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="./assets/css/suggestions.css" >
 
-<head>
-    <meta charset="utf-8">
+
     <title>Test website</title>
 </head>
 
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <a class="navbar-brand main-nav" href="#">
+            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top" alt=""> -->
+            Personal Holidays
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Suggestions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log-in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid" id="resultsdiv">
         <section id="chosen-holiday">
-            <h2 id="results-title"></h3>
+            <h2 id="results-title"></h2>
             <p id="holiday-description"></p>
         </section>
-        <div class="row resultsCards">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top attraction-img" alt="...">
+
+        <div class="row resultsCards d-flex justify-content-center">
+            <div class="card m-4 suggestion-card" id="attraction" style="width: 18rem;">
+                <img src="..." class="card-img-top attraction-img" alt="..." style="height: 35%;">
                 <div class="card-body">
                     <h5 class="card-title attraction-title">Attraction example</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary attraction-btn">Go to Attraction</a>
                 </div>
+                <a href="#" class="attraction-btn">Go to Attraction</a>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top hotel-img" alt="...">
+            
+            <div class="card m-4 suggestion-card" id="hotel"style="width: 18rem;">
+                <img src="..." class="card-img-top hotel-img" alt="..." style="height: 35%;">
                 <div class="card-body">
+           
                     <h5 class="card-title hotel-title">Hotel example</h5>
                     <p class="card-text hotel-about">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary hotel-btn">Go to Hotel</a>
                 </div>
+                <a href="#" class="hotel-btn">Go to Hotel</a>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top restaurant-img" alt="...">
+            <div class="card m-4 suggestion-card" id="restaurant" style="width: 18rem;" >
+                <img src="..." class="card-img-top restaurant-img" alt="..." style="height: 35%;">
                 <div class="card-body">
+                   
                     <h5 class="card-title restaurant-title">Restaurant example</h5>
                     <p class="card-text restaurant-about">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary restaurant-btn">Go to Restaurant</a>
+                  
                 </div>
+                <a href="#" class="restaurant-btn">Go to Restaurant</a>
             </div>
         </div>
     </div>

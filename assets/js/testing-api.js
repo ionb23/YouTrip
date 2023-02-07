@@ -28,7 +28,8 @@ for(let i =0; i <outcomes.length; i++ ){
     }
 }
 $('#results-title').text(`${type} in ${theChoice}`)
-$("#holiday-description").text(`For your ${personality} personality ${type} in ${theChoice} seems like the best choice! Check out how to make it happend`)
+$("#holiday-description").text(`Great! Based on our personality type assesment you match ${personality} type of
+ personality. So ${type} in ${theChoice} seems like the best choice! Check out our hotel, restaurant and attractions suggestions! For this type of holiday we believe ${city} would be the best place to make it happend!`)
 
 }
 
@@ -37,7 +38,7 @@ $("#holiday-description").text(`For your ${personality} personality ${type} in $
 let geoID = 0;
 let hotelID = "0";
 let restaurantID = "0";
-const apiKeyTravelAdvisor ='f72b817560msh85096028e95a534p1b3f97jsn0259ea03ef55'
+const apiKeyTravelAdvisor ='1543a61f73msh4be7f0c4722fae6p15f9c6jsnb197362fcbab'
 // let geoIDToSearch = 0;
 // let geoIDToSearch = 187497;
 

@@ -85,7 +85,7 @@ const outcomes = [
         name:'Netherlands',
         places:{
             'choleric':['Amsterdam','City break'],
-            'phlegmatic':['Amsterdam'],
+            'sanguine':['Amsterdam','Explore history and culture'],
             'melancholic':[ 'Amsterdam', 'Romantic holidays'],
             'phlegmatic':['Kinderdijk', 'Escape holidays']
         }
@@ -118,7 +118,7 @@ const outcomes = [
             'choleric':['Jeddah', 'City Break'],
             'sanguine':[' Al Balad ', 'Adventurous holidays'],
             'phlegmatic':['Medina', 'Escape holidays'],
-            'melanchilic':['Dammam', 'Escape holidays']
+            'melancholic':['Dammam', 'Escape holidays']
         }
     },
     //outcome 11
@@ -149,7 +149,7 @@ const outcomes = [
         places: {
             'choleric':['Athens','Explore history and culture'],
             'sanguine':['Athens','Explore history and culture'],
-            'melanchilic':[ 'Crete', 'Beach holidays'],
+            'melancholic':[ 'Crete', 'Beach holidays'],
             'phlegmatic':[ 'Crete', 'Beach holidays'],
         }
     },
@@ -160,7 +160,7 @@ const outcomes = [
             'choleric':['Penang', 'City break'],
             'sanguins':['Penang', 'City break'],
             'phlegmatic':['Perhentian Islands','BeachHolidays'],
-            'melanchilic':['Perhentian Islands','BeachHolidays'],
+            'melancholic':['Perhentian Islands','BeachHolidays'],
 
         }
     },
@@ -169,7 +169,7 @@ const outcomes = [
         name:'Austria',
         places:{
             'choleric':['Vienna', 'Explore history and culture'],
-            'melanchilic':['Vienna','Romantic holidays'],
+            'melancholic':['Vienna','Romantic holidays'],
             'sanguine': ['Vienna', 'City break'],
             'phlegmatic': ['Vienna','Romantic Holidays']
         }
@@ -201,8 +201,8 @@ const outcomes = [
         places: {
             'choleric': ['Paris','City break'],
             'sanguine':['Chamonix','Adventurous holidays'],
-            'phlegmatic':['Bordeaus','Escape holidays'],
-            'melancholic':['Bordeaus','Escape holidays'],
+            'phlegmatic':['Bordeaux','Escape holidays'],
+            'melancholic':['Bordeaux','Escape holidays'],
         }
     },
     //outcome 19

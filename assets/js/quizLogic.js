@@ -234,7 +234,7 @@ function quizQuestions (order){
 
     questionCard.addClass('card m-5 outerCard rounded d-flex')
     let picture = $('<img>');
-    picture.attr('src', currentPic).addClass('questionPicture').attr('alt','..');
+    picture.attr('src', currentPic).addClass('questionPicture').attr('alt','question description image');
     let cardBody = $('<div>');
     cardBody.addClass('card-body cardBody')
     let question = $('<h5>');

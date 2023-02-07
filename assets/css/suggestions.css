@@ -1,0 +1,193 @@
+:root {
+
+    --main-color: #0081A7;
+    --second-color: #b8d5b8;
+    --text-high-color: #FDFCDC;
+    --logo-color:#F67167;
+}
+
+@keyframes animate-glow {
+    0% {
+      opacity: 0;
+      filter: brightness(3) saturate(3);
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(1) saturate(1);
+      transform: scale(1, 1);
+    }
+  }
+
+/*copied navbar*/
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #FDFCDC;
+}
+
+#navbar {
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 90px;
+    width: 100%;
+    padding: 0 55px;
+    margin-bottom:5%;
+
+}
+.main-nav {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 600;
+    font-size: 280%;
+    color: #F67167 !important;
+    text-shadow: 2px 2px black;
+    margin-left: 40px;
+}
+#navbarNav {
+    justify-content: flex-end;
+    margin-right: 20px;
+    padding-bottom: 5px;
+}
+#navbarNav a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+    color: black !important;
+}
+#navbarNav a:hover {
+    color: var(--logo-color) !important;
+}
+.nav-item {
+    padding: 0 15px;
+}
+#chosen-holiday{
+    background-color: var(--second-color);
+    padding:2%;
+    margin-bottom:5%;
+
+}
+#resultsdiv{
+    width:70%;
+}
+#results-title{
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+    text-align: center;
+    color: var(--main-color);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    animation-delay: 0.5s;
+}
+#holiday-description{
+    animation-duration: 0.75s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+    width:80%;
+    margin-left:10%;
+   text-align:center;
+   font-family: 'Yanone Kaffeesatz', sans-serif;
+   font-size:1.5rem ;
+   animation-delay: 1s;
+
+}
+.resultsCards{
+    background:var(--main-color);
+    padding:2%;
+ 
+}
+.suggestion-card{
+    max-height:50vh;
+    background-color: var(--text-high-color);
+    -webkit-box-shadow: 5px 5px 13px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 13px 0px rgba(0,0,0,0.44);
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+.card-body{
+    overflow:scroll;
+    overflow-x: hidden;
+    border-top: solid 2px var(--logo-color);
+}
+
+.card-body::-webkit-scrollbar {
+    background-color:rgba(0,0,0,0);
+    width:10px;
+   
+  }
+.card-body::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+  }
+
+
+#attraction{
+animation-delay: 1.9s;
+}
+#hotel{
+animation-delay: 2.4s ;
+}
+#restaurant{
+animation-delay: 2.9s;
+}
+.hotel-btn ,.attraction-btn , .restaurant-btn{
+    background-color: #F67167;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 5px #00000030;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;   
+}
+.card-title{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.2rem;
+}
+
+.card-img-top{
+    object-fit:cover;
+}
+@media (max-width:1190px){
+    #resultsdiv{
+        width:100% !important;
+        padding:0 !important;
+        margin:0% !important;
+    }
+    #chosen-holiday{
+        width: 100% !important;
+
+    }
+}
+@media(max-width:500px){
+    #resultsdiv{
+        width:100% !important;
+        padding:0 !important;
+        margin-left:8px !important;
+    }
+    .suggestion-card{
+        max-height:80vh;
+    }
+}
