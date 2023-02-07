@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <head>
     <meta charset="utf-8">
     <title>Test website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,23 +33,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active" id="home-nav">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                <li class="nav-item" id="about-nav">
+                    <a class="nav-link" href="#" data-target="#aboutModal" data-toggle="modal">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="suggestions-nav">
                     <a class="nav-link" href="#">Suggestions</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log-in</a>
+                <li class="nav-item" id="login-nav">
+                    <a class="nav-link" data-target="#subscribeModal" data-toggle="modal" href="#">Subscribe</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="main-info">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/images/carousel-small-1.jpg" class="d-block w-100" alt="...">
@@ -58,6 +60,13 @@
                 <div class="carousel-item">
                     <img src="assets/images/carousel-small-3.jpg" class="d-block w-100" alt="...">
                 </div>
+                <div class="carousel-item">
+                    <img src="assets/images/Budapest bridge.jpg" class= "d-block w-100" alt="...">
+                </div>
+               
+                    
+                </div>
+
             </div>
         </div>
         <div class="jumbo">
@@ -75,6 +84,50 @@
             </button>
         </div>
     </div>
+
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">About us</h4>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <h5> Welcome to Personal Holidays! </h5>
+                    <p>If you're looking for a holiday perfect for your character and interests, you've come to the
+                        right place. <br> Established in 2022 by a small team of developers, our service will help you
+                        to determine your personality type, and give you travel suggestions that match YOU!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Subscribe</h4>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <h5> Welcome to Personal Holidays! </h5>
+                    <p>If you're looking for a holiday perfect for your character and interests, you've come to the
+                        right place. <br> Established in 2022 by a small team of developers, our service will help you
+                        to determine your personality type, and give you travel suggestions that match YOU!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="jumbo-break">
         <h3>LOCATION</h3>
@@ -124,7 +177,10 @@
         </div>
     </div>
 
-
+    <div class="container travel-quote">
+        <p id="quote"></p>
+        <p id="author"></p>
+    </div>
 
 
 
@@ -157,7 +213,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/keys.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/keys.js"></script> -->
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
