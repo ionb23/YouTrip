@@ -306,6 +306,6 @@ function loadingTime (time) {
         time--;
         if(time < 0){
 
-        window.location.replace('./testing-api.html')
+        window.location.replace('suggestions.html')
         clearInterval(timerInterval)
 } },1000)};

@@ -15,7 +15,7 @@
 // //season = [any, hot, cold]
 // const southAmerican = []
 
-// const middleEastern =[]
+// const middleEastern = []
 const outcomes = [
     //outcome number one
     {
@@ -23,8 +23,8 @@ const outcomes = [
     places: {
         'choleric': ['Prague','City break'],
         'sanguine': ['Cesky Krumlov','Explore history and culture'],
-        'phlegmatic': ['South Moravia','Escape holiday'],
-        'melancholic': ['South Moravia','Escape holiday'],
+        'phlegmatic': ['Brno','Escape holiday'],
+        'melancholic': ['Brno','Escape holiday'],
     }},
     //outcome number two
     {
@@ -43,7 +43,7 @@ const outcomes = [
         places:{
         'choleric': ['Split','City break'],
         'sanguine': ['Split','City break'],
-        'phlegmatic': ['Nos Kalik','Escape holidays'],
+        'phlegmatic': ['Skradin','Escape holidays'],
         'melancholic': ['Dubrovnik','Beach holidays'],
         }
 
@@ -54,8 +54,8 @@ const outcomes = [
         name:'India',
         places: {
             'choleric': ['Mumbay','Ctiy break'],
-            'sanguine':[ 'Amrisatar','Explore history and culture'],
-            'melancholic':['Zanskar', 'Escape holidays'],
+            'sanguine':[ 'Amritsar','Explore history and culture'],
+            'melancholic':['Ranthambore', 'Escape holidays'],
             'phlegmatic':['Goa','Beach Holidays']
         }
     },
@@ -63,7 +63,7 @@ const outcomes = [
     {
         name:'UAE',
         places:{
-            'choleric': ['Abu Dabhi','Ctiy break'],
+            'choleric': ['Abu Dhabi','Ctiy break'],
             'sanguine':[ 'Dubai','City break'],
             'melancholic':['Fujairah', 'Beach holidays'],
             'phlegmatic':['Fujairaha','Beach Holidays']
@@ -74,7 +74,7 @@ const outcomes = [
         name:'Hungary',
         places:{
             'melancholic':['Budapest','Romantic holidays'],
-            'sanguine': ['The Danube River','Adventurous holidays'],
+            'sanguine': ['Baja','Adventurous holidays'],
             'choleric':['Budapest','City Break'],
             'phlegmatic':['Egerszalók', 'Escape holidays']
 
@@ -85,8 +85,8 @@ const outcomes = [
         name:'Netherlands',
         places:{
             'choleric':['Amsterdam','City break'],
-            'phlegmatic':['Amsterdam'],
-            'melancholic':[ 'Amsterdam', 'Romantic holidays'],
+            'phlegmatic':['Amsterdam', 'Escape holidays'],
+            'melancholic':['Amsterdam', 'Romantic holidays'],
             'phlegmatic':['Kinderdijk', 'Escape holidays']
         }
     },
@@ -97,8 +97,8 @@ const outcomes = [
         places: {
             'choleric': ['Seoul','City Break'],
             'sanguine': ['Seoul','City Break'],
-            'phlegmatic': ['Bukhansen mountains', 'Escape holidays'],
-            'melancholic':['Bukhansen mountains', 'Escape holidays'],
+            'phlegmatic': ['Uijeongbu', 'Escape holidays'],
+            'melancholic':['Uijeongbu', 'Escape holidays'],
         }
     },
     //outcome 9
@@ -116,7 +116,7 @@ const outcomes = [
         name: 'Saudi Arabia',
         places:{
             'choleric':['Jeddah', 'City Break'],
-            'sanguine':[' Al Balad ', 'Adventurous holidays'],
+            'sanguine':['Medina', 'Adventurous holidays'],
             'phlegmatic':['Medina', 'Escape holidays'],
             'melancholic':['Dammam', 'Escape holidays']
         }
@@ -159,8 +159,8 @@ const outcomes = [
         places:{
             'choleric':['Penang', 'City break'],
             'sanguins':['Penang', 'City break'],
-            'phlegmatic':['Perhentian Islands','BeachHolidays'],
-            'melancholic':['Perhentian Islands','BeachHolidays'],
+            'phlegmatic':['Kelantan','BeachHolidays'],
+            'melancholic':['Kelantan','BeachHolidays'],
 
         }
     },
@@ -190,8 +190,8 @@ const outcomes = [
         places:{
             'sanguine':['Mexico City','Explore history and culture'],
             'choleric':['Mexico City','Explore history and culture'],
-            'melancholic':['Pico De Orizaba','Escape holidays'],
-            'phlegmatic': ['Pico De Orizaba','Escape holidays'],
+            'melancholic':['Tlachichuca','Escape holidays'],
+            'phlegmatic': ['Tlachichuca','Escape holidays'],
         }
     },
     //outcome 18
@@ -201,8 +201,8 @@ const outcomes = [
         places: {
             'choleric': ['Paris','City break'],
             'sanguine':['Chamonix','Adventurous holidays'],
-            'phlegmatic':['Bordeaus','Escape holidays'],
-            'melancholic':['Bordeaus','Escape holidays'],
+            'phlegmatic':['Bordeaux','Escape holidays'],
+            'melancholic':['Bordeaux','Escape holidays'],
         }
     },
     //outcome 19

@@ -163,3 +163,44 @@ h5{
     background-color: #F67167;
     transform: scale(1.25) perspective(1px);
 }
+@media (max-width: 977px ){
+    .main-nav{
+     text-align:center;
+    }
+#checkboxes{
+    width:90%;
+    padding:1% !important;
+}
+.check{
+    border-bottom: 2px solid black;
+    border-right:1px solid black;
+    /*border-radius:5px;*/
+    margin:1%;
+}
+.card{
+    width: 60% !important;
+}
+
+} 
+@media (max-width: 500px ) {
+    .main-nav{
+        margin-left:0;
+        margin-right:10px;
+    }
+ 
+ 
+   #quiz{
+    width: 100%;
+   }
+   .card{
+    margin:15% 1% !important; 
+    width:100% !important;
+   }
+   .answ{
+    width:80%;
+    margin-left:10% !important;
+   }
+   .answ:hover{
+    background-color: #F67167;}
+
+}
