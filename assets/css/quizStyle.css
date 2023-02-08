@@ -68,7 +68,7 @@ body {
 .nav-item {
     padding: 0 15px;
 }
-
+/* modals, info in the main style.css*/
 #aboutModal,
 #subscribeModal {
     text-align: center;
@@ -239,7 +239,9 @@ h5 {
 .personalSituation {
     padding-top: 20px !important;
 }
-
+.navBtnToggled{
+    color:black;
+}
 
 @media (max-width: 977px) {
     .main-nav {
@@ -260,14 +262,29 @@ h5 {
 
     .card {
         width: 60% !important;
+        height: fit-content !important;
     }
+
 
 }
 
 @media (max-width: 500px) {
+    #navbarNav {
+        z-index:100;
+        background-color: var(--main-color);
+        margin-top:1%;
+        border: double 2px var(--logo-color);
+        height: 40vh;
+        width:max-content;
+        text-align: center;
+    
+    }
     .main-nav {
         margin-left: 0;
         margin-right: 10px;
+    }
+    img{
+        height:35vh !important;
     }
 
 
@@ -279,6 +296,7 @@ h5 {
         margin: 15% 1% !important;
         width: 100% !important;
     }
+    .
 
     .answ {
         width: 80%;
