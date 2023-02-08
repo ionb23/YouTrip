@@ -34,9 +34,11 @@ function findHolidays() {
 
 }
 
-let geoID = 0;
-let hotelID = "0";
-let restaurantID = "0";
+let geoID;
+let hotelID;
+let restaurantID;
+let attractionID;
+
 // let geoIDToSearch = 0;
 // let geoIDToSearch = 187497;
 
@@ -110,7 +112,22 @@ $.ajax(autoComplete).done(function (response1) {
                         console.log(hotelName);
                         var hotelURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
                         console.log(hotelURL);
-                        var hotelAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[6].about;
+                        var hotelAbout;
+
+
+                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                    hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
+                                } else hotelAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                            } 
+                        }
+
+                        if (hotelAbout === undefined || hotelAbout === null) {
+                            hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
+                        }
+
+
                         console.log(hotelAbout);
                         var hotelImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
                         var hotelImgFinal = hotelImg.replace("{width}", 1000)
@@ -178,10 +195,19 @@ $.ajax(autoComplete).done(function (response1) {
                         console.log(restaurantName);
                         var restaurantURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
                         console.log(restaurantURL);
-                        var restaurantAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[8].about;
+                        var restaurantAbout;
+
+                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                    restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
+                                } else restaurantAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                            } 
+                        }
+
                         console.log(restaurantAbout);
 
-                        if (restaurantAbout === null) {
+                        if (restaurantAbout === undefined || restaurantAbout === null) {
                             restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
                         }
 
@@ -202,7 +228,7 @@ $.ajax(autoComplete).done(function (response1) {
     }
 
     if (geoID.length > 0 && restaurantID > 0) {
-        setTimeout(fetchRestaurant, 1000);
+        setTimeout(fetchRestaurant, 2000);
     } else setTimeout(fetchRestaurant, 3000);
 
     // defines filters to use for the attraction list
@@ -250,9 +276,26 @@ $.ajax(autoComplete).done(function (response1) {
                         console.log(attractionName);
                         var attractionURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
                         console.log(attractionURL);
-                        var attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[8].about;
+                        var attractionAbout;
 
-                        if (attractionAbout === null) {
+                        // for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                        //     if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].__typename = "AppPresentation_PoiAbout") {
+                        //         if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                        //             attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                        //         } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                        //     } else attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                        // }
+
+
+                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                    attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                                } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                            } 
+                        }
+
+                        if (attractionAbout === undefined || attractionAbout === null) {
                             attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
                         }
 
