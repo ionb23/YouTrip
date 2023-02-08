@@ -6,6 +6,8 @@
     --text-high-color: #FDFCDC;
 }
 
+/* General styles */
+
 a {
     text-decoration: none;
 }
@@ -13,6 +15,8 @@ a {
 body {
     background-color: #FDFCDC;
 }
+
+/* Style to move navbar to top and make transparent */
 
 #navbar {
     background-color: transparent;
@@ -26,6 +30,8 @@ body {
 
 }
 
+/* Changes brand text on navbar */
+
 .main-nav {
     font-family: 'Pacifico', sans-serif;
     font-weight: 600;
@@ -35,9 +41,6 @@ body {
     margin-left: 40px;
 }
 
-/* .main-info :hover {
-    scale: 1.04 !important;
-} */
 
 
 #navbarNav {
@@ -47,6 +50,8 @@ body {
 
 
 }
+
+/* Styles for navbar links on right-hand side */
 
 #navbarNav a {
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -60,14 +65,20 @@ body {
 
 }
 
+
+
 .nav-item {
     padding: 0 15px;
 }
+
+/* Style for carosel and main card */
 
 .main-info {
     position: relative;
     height: 30%;
 }
+
+/* Styles for both modals */
 
 #aboutModal,
 #subscribeModal {
@@ -98,6 +109,8 @@ body {
     background-color: #b8d5b8
 }
 
+/* Sets fonts for and colour for subscribe modal */
+
 #email-label {
     font-family: 'Pacifico', sans-serif;
 }
@@ -114,7 +127,7 @@ body {
     box-shadow: 0 0 5px #00000030;
 }
 
-
+/* Positions main jumbo card */
 
 .jumbo {
     position: absolute;
@@ -124,6 +137,8 @@ body {
     z-index: 3;
     text-align: center;
 }
+
+/* Styles main card fonts */
 
 .jumbo p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -135,10 +150,14 @@ body {
     font-size: 150%;
 }
 
+/* Sets height of main carousel */
+
 .carousel-inner {
     width: 100%;
     height: 125vh !important;
 }
+
+/* Style for multiple carousel images */
 
 .carousel-item img {
     /* height: 125 !important; */
@@ -148,6 +167,7 @@ body {
 
 }
 
+/* Styles main jumbotron card */
 
 .carouselCard {
     background-color: #00000070;
@@ -162,6 +182,8 @@ body {
     letter-spacing: 3px;
 
 }
+
+/* Styles jumbo button to Take Quiz */
 
 .takeQuizButton {
     margin-top: 30px;
@@ -181,7 +203,7 @@ body {
     color: #FFFFFF !important;
 }
 
-
+/* Styles for break between jumbo and examples section */
 
 .jumbo-break {
     background-color: #000000;
@@ -202,6 +224,8 @@ body {
 
 }
 
+/* Styles for example results section */
+
 #results-title {
     text-align: center;
     margin: 140px 0;
@@ -220,6 +244,8 @@ body {
     color: var(--main-color);
     text-align: center;
 }
+
+/* Styles individual example cards */
 
 .resultsCards {
     justify-content: space-around;
@@ -249,12 +275,16 @@ body {
 
 }
 
+/* Styles buttons on each example card */
+
 .show-me-buttons {
     background-color: #F67167;
     color: #FFFFFF;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0 0 5px #00000030;
 }
+
+/* Styles for quote section at base of page */
 
 .travel-quote {
     text-align: center;
@@ -275,6 +305,8 @@ body {
     font-family: 'Pacifico', sans-serif;
     text-shadow: 2px 2px black;
 }
+
+/* Styles for footer at base of page */
 
 
 footer {
@@ -299,6 +331,8 @@ footer {
     transform: translate(-50%, -50%);
     min-width: 300px;
 }
+
+/* Styles icons for social media links */
 
 #icons-footer {
     width: 200px;
