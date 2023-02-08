@@ -69,9 +69,10 @@ body {
     height: 30%;
 }
 
-#aboutModal {
+#aboutModal,
+#subscribeModal {
     text-align: center;
-    
+
 }
 
 .modal:before {
@@ -80,7 +81,7 @@ body {
     height: 100%;
     vertical-align: middle;
 }
-  
+
 .modal-dialog {
     display: inline-block;
     vertical-align: middle;
@@ -94,7 +95,23 @@ body {
 }
 
 .modal-content {
-    background-color:#b8d5b8
+    background-color: #b8d5b8
+}
+
+#email-label {
+    font-family: 'Pacifico', sans-serif;
+}
+
+.subscribe-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-button {
+    background-color: #F67167;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 5px #00000030;
 }
 
 
@@ -128,7 +145,7 @@ body {
     object-fit: cover !important;
     max-height: 150vh !important;
     object-position: center;
-   
+
 }
 
 
@@ -303,21 +320,38 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 1000px) {
-    .resultsCards .card {
-      margin: 20px 0;
+@media screen and (max-width: 600px) {
+    .carousel-inner {
+        height: 70vh !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .carousel-inner {
+        height: 200px !important;
     }
 
- .jumbo {
-    margin-bottom: 100px;
-    margin-top: 50px
- }
+}
 
- nav .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 30px 0 0 0;
- }
+@media only screen and (max-width: 1000px) {
+    .resultsCards .card {
+        margin: 20px 0;
+    }
 
-  }
+    .jumbo {
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+
+    nav .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 30px 0 0 0;
+    }
+
+    .carousel-inner {
+        height: 100vh !important
+    }
+
+}
