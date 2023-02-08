@@ -123,7 +123,7 @@ body {
 .hide {
     display: none;
 }
-
+/*stylink of the checkbox form*/
 #checkboxes {
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -151,7 +151,7 @@ p {
 .check {
     padding: 0.5%;
 }
-
+/*adding radio questions*/
 #bottomQ {
     margin-top: 2%;
     border-top: 6px double black;
@@ -166,7 +166,6 @@ p {
     font-weight: 800;
     font-size: 150%;
     box-shadow: 0 2px 10px #00000055;
-    /* transition: all 0.3s ease-in-out; */
 }
 
 #checkBtn:hover {
@@ -180,7 +179,7 @@ p {
     height: 70vh;
     width: 35vw;
     animation-duration: 0.7s;
-    animation-name: animate-pop;
+    animation-name: animate-pop; /*added animated effect for quiz card question to make bette website 'feel*/
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
 
@@ -194,7 +193,7 @@ h5 {
     height: 40%;
     border-bottom: solid 2px var(--text-high-color) f
 }
-
+/*fonts for answers*/
 .answ {
     display: block;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -211,7 +210,7 @@ h5 {
     animation-name: animate-pop;
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);*/
 }
-
+/*Error modal to pop out when checkboxes not filled properly*/
 .modal-content-error {
     background-color: var(--main-color);
     color: var(--second-color);
@@ -239,6 +238,7 @@ h5 {
 .personalSituation {
     padding-top: 20px !important;
 }
+/*toggle menu button*/
 .navBtnToggled{
     color:black;
 }
@@ -269,6 +269,7 @@ h5 {
 }
 
 @media (max-width: 500px) {
+
     #navbarNav {
         z-index:100;
         background-color: var(--main-color);
@@ -279,6 +280,7 @@ h5 {
         text-align: center;
     
     }
+    
     .main-nav {
         margin-left: 0;
         margin-right: 10px;
@@ -296,7 +298,6 @@ h5 {
         margin: 15% 1% !important;
         width: 100% !important;
     }
-    .
 
     .answ {
         width: 80%;
