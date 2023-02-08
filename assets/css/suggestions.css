@@ -151,7 +151,7 @@ animation-delay: 2.4s ;
 #restaurant{
 animation-delay: 2.9s;
 }
-.hotel-btn ,.attraction-btn , .restaurant-btn{
+#hotel-btn ,#attraction-btn , #restaurant-btn{
     background-color: #F67167;
     color: #FFFFFF;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

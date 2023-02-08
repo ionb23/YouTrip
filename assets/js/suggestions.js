@@ -180,6 +180,11 @@ $.ajax(autoComplete).done(function (response1) {
                         console.log(restaurantURL);
                         var restaurantAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[8].about;
                         console.log(restaurantAbout);
+
+                        if (restaurantAbout === null) {
+                            restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
+                        }
+
                         var restaurantImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
                         var restaurantImgFinal = restaurantImg.replace("{width}", 1000)
                         console.log(restaurantImgFinal);
@@ -188,6 +193,7 @@ $.ajax(autoComplete).done(function (response1) {
                         $("#restaurant-title").text(restaurantName);
                         $("#restaurant-about").text(restaurantAbout);
                         $("#restaurant-img").attr("src", restaurantImgFinal);
+
                     })
                     .catch(err => console.error(err));
             })
@@ -245,6 +251,11 @@ $.ajax(autoComplete).done(function (response1) {
                         var attractionURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
                         console.log(attractionURL);
                         var attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[8].about;
+
+                        if (attractionAbout === null) {
+                            attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                        }
+
                         console.log(attractionAbout);
                         var attractionImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
                         var attractionImgFinal = attractionImg.replace("{width}", 1000)
@@ -266,13 +277,3 @@ $.ajax(autoComplete).done(function (response1) {
     } else setTimeout(fetchAttraction, 3000);
 
 });
-
-
-
-
-// attraction
-// You should definitely see this picturesque location in ${cityName}!
-
-// restaurant
-
-// Try this amazing restaurant in ${cityName} for a great gastronomic experience!
