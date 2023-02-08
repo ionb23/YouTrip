@@ -65,6 +65,9 @@ body {
 .nav-item {
     padding: 0 15px;
 }
+
+/*navigation END ,for detailed comments please see style.css*/
+
 #chosen-holiday{
     background-color: var(--second-color);
     padding:2%;
@@ -143,15 +146,15 @@ body {
 
 
 #attraction{
-animation-delay: 1.9s;
+animation-delay: 4.9s;
 }
 #hotel{
-animation-delay: 2.4s ;
+animation-delay: 5.4s ;
 }
 #restaurant{
-animation-delay: 2.9s;
+animation-delay: 5.9s;
 }
-.hotel-btn ,.attraction-btn , .restaurant-btn{
+#hotel-btn ,#attraction-btn , #restaurant-btn{
     background-color: #F67167;
     color: #FFFFFF;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -180,6 +183,9 @@ animation-delay: 2.9s;
         width: 100% !important;
 
     }
+    .suggestion-card{
+        max-height:80vh;
+    }
 }
 @media(max-width:500px){
     #resultsdiv{
@@ -188,6 +194,6 @@ animation-delay: 2.9s;
         margin-left:8px !important;
     }
     .suggestion-card{
-        max-height:80vh;
+        max-height:110vh;
     }
 }
