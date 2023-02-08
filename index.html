@@ -20,13 +20,14 @@
 
 <body>
 
+    <!-- Navbar html element -->
 
     <nav class="navbar navbar-expand-lg" id="navbar">
-        <a class="navbar-brand main-nav" href="#">
-            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt=""> -->
-            Personal Holidays
+        <a class="navbar-brand main-nav" href="index.html">
+            YouTrip
         </a>
+
+        <!-- Toggles at lower pixel widths -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active" id="home-nav">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" id="about-nav">
                     <a class="nav-link" href="#" data-target="#aboutModal" data-toggle="modal">About</a>
                 </li>
                 <li class="nav-item" id="suggestions-nav">
-                    <a class="nav-link" href="#">Suggestions</a>
+                    <a class="nav-link" href="suggestions.html">Suggestions</a>
                 </li>
                 <li class="nav-item" id="login-nav">
                     <a class="nav-link" data-target="#subscribeModal" data-toggle="modal" href="#">Subscribe</a>
@@ -48,46 +49,42 @@
             </ul>
         </div>
     </nav>
+
     <div class="main-info">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/bg-images/bg-image-10.jpg" class="d-block" alt="pyramid-with-tourists">
+                    <img src="assets/images/bg-images//bg-image-10.jpg" class="d-block" alt="pyramid-with-tourists">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-12.jpg" class="d-block" alt="small-village-next-to-lake">
+                    <img src="assets/images/bg-images//bg-image-12.jpg" class="d-block"
+                        alt="small-village-next-to-lake">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-3.jpg" class="d-block" alt="beach-with-palm-tree">
+                    <img src="assets/images/bg-images//bg-image-3.jpg" class="d-block" alt="beach-with-palm-tree">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-29.jpg" class= "d-block" alt="mountain-range-with-foggy">
+                    <img src="assets/images/bg-images//bg-image-29.jpg" class="d-block" alt="mountain-range-with-foggy">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-22.jpg" class="d-block" alt="cherry-blossoms-over-canal-with-event">
+                    <img src="assets/images/bg-images//bg-image-22.jpg" class="d-block"
+                        alt="cherry-blossoms-over-canal-with-event">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-24.jpg" class="d-block" alt="snowboarder-on-top-of-snowy-mountai">
+                    <img src="assets/images/bg-images//bg-image-24.jpg" class="d-block"
+                        alt="snowboarder-on-top-of-snowy-mountai">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-26.jpg" class= "d-block" alt="view-over-rainforest">
+                    <img src="assets/images/bg-images//bg-image-26.jpg" class="d-block" alt="view-over-rainforest">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-7.jpg" class="d-block" alt="camel-in-desert">
+                    <img src="assets/images/bg-images//bg-image-7.jpg" class="d-block" alt="camel-in-desert">
                 </div>
+
                 <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-35.jpg" class="d-block" alt="hot-air-balloons-in-sky">
+                    <img src="assets/images/bg-images//bg-image-30.jpg" class="d-block" alt="jungle-with-small-cabin">
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/images/bg-images/bg-image-30.jpg" class= "d-block" alt="jungle-with-small-cabin">
-                </div>
-               
-               
-               
-               
-               
-                    
-               
+
 
             </div>
         </div>
@@ -101,7 +98,7 @@
                 </div>
             </div>
             <button type="button" class="btn takeQuizButton">
-                <a href="quiz.html">Take Quiz</a>
+                <a href="./quiz.html">Take Quiz</a>
 
             </button>
         </div>
@@ -109,41 +106,55 @@
 
 
     <!-- About Modal -->
-    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">About us</h4>
-                    <span aria-hidden="true">&times;</span>
+    <div class="modal fade modal-nav" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-nav">
+            <div class="modal-content modal-content-nav">
+                <div class="modal-header modal-header-nav">
+                    <h4 class="modal-title modal-title-nav" id="exampleModalLabel">About us</h4>
                 </div>
-                <div class="modal-body">
-                    <h5> Welcome to Personal Holidays! </h5>
+                <div class="modal-body modal-body-nav">
+                    <h5> Welcome to YouTrip! </h5>
                     <p>If you're looking for a holiday perfect for your character and interests, you've come to the
-                        right place.</p>  <p>Established in 2022 by a small team of developers, our service will help you
-                        to determine your personality type, and give you travel suggestions that match YOU!</p>
+                        right place.</p>
+                    <p>Established in 2022 by a small team of developers, our service will help you
+                        to determine your personality type, and give you travel suggestions that match it perfectly. If
+                        you're looking for an adventure and are an outgoing personality, find a city break in some of
+                        the world's nighlife capitals. Or are you aiming to find a getaway that will help you to get
+                        some much-needed relaxation? You may find yourself in the Pico de Orizaba mountains, or
+                        sunbathing on a beach in Turkey. The possibilities are endless!</p>
+                    <h6>Take the quiz to get started on your journey!</h6>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer modal-footer-nav">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">Subscribe</h4>
+
+    <!-- SUBSCRIBE MODAL -->
+
+    <div class="modal fade modal-nav" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-nav">
+            <div class="modal-content modal-content-nav">
+                <div class="modal-header modal-header-nav">
+                    <h4 class="modal-title modal-title-nav">Subscribe</h4>
                     <span aria-hidden="true">&times;</span>
                 </div>
-                <div class="modal-body">
-                    <h5> Welcome to Personal Holidays! </h5>
-                    <p>If you're looking for a holiday perfect for your character and interests, you've come to the
-                        right place. <br> Established in 2022 by a small team of developers, our service will help you
-                        to determine your personality type, and give you travel suggestions that match YOU!</p>
+                <div class="modal-body modal-body-nav">
+                    <h5>Get onboard!</h5>
+                    <p>Subscribe below to get updates on new holiday destinations, and to return to your suggestions.
+                    </p>
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label" id="email-label">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="david.attenborough@gmail.com">
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="modal-footer modal-footer-nav subscribe-footer">
+                    <button type="submit" class="btn subscribe-button" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn subscribe-button" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -188,7 +199,8 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="./assets/images/bg-images/nightclub.jpg" class="card-img-top" alt="dark-nightclub-with-orange-light">
+                <img src="./assets/images/bg-images/nightclub.jpg" class="card-img-top"
+                    alt="dark-nightclub-with-orange-light">
                 <div class="card-body">
                     <h5 class="card-title">Party all night?</h5>
                     <p class="card-text">Get booked in to head to some of the world's best party capitals - Berlin,
@@ -210,9 +222,9 @@
 
     <footer class="navbar navbar-expand-lg navbar-light bg-dark" id="footer">
         <a class="navbar-brand footer-title" href="#">
-            Personal Holidays
+            YouTrip
         </a>
-        <p class="footer-info">Personal Holidays © 2022 <br> <a href="#" class="top-link">Back to top of page</a></p>
+        <p class="footer-info">YouTrip © 2022 <br> <a href="#" class="top-link">Back to top of page</a></p>
 
         <div class="collapse navbar-collapse" id="icons-footer">
             <a href="#" class="fa fa-facebook"></a>

@@ -65,6 +65,58 @@ body {
 .nav-item {
     padding: 0 15px;
 }
+
+#aboutModal,
+#subscribeModal {
+    text-align: center;
+
+}
+
+.modal-nav:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.modal-dialog-nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal-title-nav {
+    text-align: center;
+    font-family: 'Pacifico', sans-serif;
+    margin: 0 auto;
+    font-size: 50px;
+}
+
+.modal-content-nav {
+    background-color: #b8d5b8
+}
+
+.modal-body-nav p {
+    font-size: 1rem;
+}
+
+/* Sets fonts for and colour for subscribe modal */
+
+#email-label {
+    font-family: 'Pacifico', sans-serif;
+}
+
+.subscribe-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-button {
+    background-color: #F67167;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 5px #00000030;
+}
+
 #chosen-holiday{
     background-color: var(--second-color);
     padding:2%;

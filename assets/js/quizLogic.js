@@ -240,6 +240,10 @@ function quizQuestions (order){
     cardBody.addClass('card-body cardBody')
     let question = $('<h5>');
     question.addClass('card-title text-center').text(askThis[order].question);
+    let orderOfQuestion = $('<p>')
+    let questionOrder = order + 1
+    orderOfQuestion.text(`${questionOrder}/7`).addClass('text-center').css('font-size','0.8rem')
+
     let answerOne = $('<button>')
     answerOne.addClass('btn m-3 answ').attr('id',askThis[order].answA.addTo).text(askThis[order].answA.answ).css('display','block')
     let answerTwo = $('<button>')
@@ -247,8 +251,8 @@ function quizQuestions (order){
     let answerThree = $('<button>')
     answerThree.addClass('btn m-3 answ').attr('id',askThis[order].answC.addTo).text(askThis[order].answC.answ).css('display','block')
 
-
-    cardBody.append(question, answerOne, answerTwo, answerThree)
+// orderOfQuestion shows the order of each question
+    cardBody.append(orderOfQuestion, question, answerOne, answerTwo, answerThree)
     questionCard.append(picture, cardBody)
 
     quiz.append(questionCard)

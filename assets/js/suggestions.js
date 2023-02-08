@@ -29,8 +29,8 @@ function findHolidays() {
         }
     }
     $('#results-title').text(`${type} in ${theChoice}`)
-    $("#holiday-description").text(`Great! Based on our personality type assesment you match ${personality} type of
- personality. So ${type} in ${theChoice} seems like the best choice! Check out our hotel, restaurant and attractions suggestions! For this type of holiday we believe ${city} would be the best place to make it happend!`)
+    $("#holiday-description").text(`Great! Based on our personality type assessment you match ${personality} type of
+ personality. Therefore ${type} in ${theChoice} seems like the best choice for you! Check out our hotel, restaurant and attraction suggestions below! For this type of holiday we believe ${city} would be the best place to make it happen!`)
 
 }
 
@@ -102,48 +102,53 @@ $.ajax(autoComplete).done(function (response1) {
                     body: `{"contentId":"${hotelID}","checkIn":"2022-03-03","checkOut":"2022-03-05","rooms":[{"adults":2,"childrenAges":[2]},{"adults":2,"childrenAges":[3]}]}`
                 };
 
-                fetch('https://travel-advisor.p.rapidapi.com/hotels/v2/get-details?currency=USD&units=km&lang=en_US', hotelDetails)
-                    .then(response3 => response3.json())
-                    .then(response3 => {
+                function fetchHotelDetails() {
+                    fetch('https://travel-advisor.p.rapidapi.com/hotels/v2/get-details?currency=USD&units=km&lang=en_US', hotelDetails)
+                        .then(response3 => response3.json())
+                        .then(response3 => {
 
-                        console.log("This is the output of hotels/v2/get-details:");
-                        console.log(response3);
-                        var hotelName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
-                        console.log(hotelName);
-                        var hotelURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
-                        console.log(hotelURL);
-                        var hotelAbout;
-
-
-                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
-                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
-                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
-                                    hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
-                                } else hotelAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
-                            } 
-                        }
-
-                        if (hotelAbout === undefined || hotelAbout === null) {
-                            hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
-                        }
+                            console.log("This is the output of hotels/v2/get-details:");
+                            console.log(response3);
+                            var hotelName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
+                            console.log(hotelName);
+                            var hotelURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
+                            console.log(hotelURL);
+                            var hotelAbout;
 
 
-                        console.log(hotelAbout);
-                        var hotelImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
-                        var hotelImgFinal = hotelImg.replace("{width}", 1000)
-                        console.log(hotelImgFinal);
+                            for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                                if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                    if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                        hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
+                                    } else hotelAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                                }
+                            }
 
-                        $("#hotel-btn").attr("href", hotelURL);
-                        $("#hotel-title").text(hotelName);
-                        $("#hotel-about").text(hotelAbout);
-                        $("#hotel-img").attr("src", hotelImgFinal);
-                    })
-                    .catch(err => console.error(err));
+                            if (hotelAbout === undefined || hotelAbout === null) {
+                                hotelAbout = (`You can enjoy a nice stay at this hotel in ${city}!`)
+                            }
+
+
+                            console.log(hotelAbout);
+                            var hotelImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
+                            var hotelImgFinal = hotelImg.replace("{width}", 1000)
+                            console.log(hotelImgFinal);
+
+                            $("#hotel-btn").attr("href", hotelURL);
+                            $("#hotel-title").text(hotelName);
+                            $("#hotel-about").text(hotelAbout);
+                            $("#hotel-img").attr("src", hotelImgFinal);
+                        })
+                        .catch(err => console.error(err));
+                }
+
+                if (geoID.length > 0 && hotelID > 0) {
+                    setTimeout(fetchHotelDetails, 1000);
+                } else setTimeout(fetchHotelDetails, 3000);
+
             })
             .catch(err => console.error(err));
-
     }
-
     if (geoID.length > 0 && hotelID > 0) {
         setTimeout(fetchHotel, 1000);
     } else setTimeout(fetchHotel, 3000);
@@ -185,43 +190,57 @@ $.ajax(autoComplete).done(function (response1) {
                     body: `{"contentId":"${restaurantID}","reservationTime":"2023-03-07T20:00","partySize":2}`
                 };
 
-                fetch('https://travel-advisor.p.rapidapi.com/restaurants/v2/get-details?currency=USD&units=km&lang=en_US', restaurantDetails)
-                    .then(response3 => response3.json())
-                    .then(response3 => {
+                function fetchRestaurantDetails() {
+                    fetch('https://travel-advisor.p.rapidapi.com/restaurants/v2/get-details?currency=USD&units=km&lang=en_US', restaurantDetails)
+                        .then(response3 => response3.json())
+                        .then(response3 => {
 
-                        console.log("This is the output of restaurants/v2/get-details:");
-                        console.log(response3);
-                        var restaurantName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
-                        console.log(restaurantName);
-                        var restaurantURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
-                        console.log(restaurantURL);
-                        var restaurantAbout;
+                            console.log("This is the output of restaurants/v2/get-details:");
+                            console.log(response3);
+                            var restaurantName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
+                            console.log(restaurantName);
+                            var restaurantURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
+                            console.log(restaurantURL);
+                            var restaurantAbout;
 
-                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
-                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
-                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
-                                    restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
-                                } else restaurantAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
-                            } 
-                        }
+                            for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                                if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                    if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                        restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
+                                    } else restaurantAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                                }
+                            }
 
-                        console.log(restaurantAbout);
+                            console.log(restaurantAbout);
 
-                        if (restaurantAbout === undefined || restaurantAbout === null) {
-                            restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
-                        }
+                            if (restaurantAbout === undefined || restaurantAbout === null) {
+                                restaurantAbout = (`Try this amazing restaurant in ${city} for a great gastronomic experience!`)
+                            }
 
-                        var restaurantImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
-                        var restaurantImgFinal = restaurantImg.replace("{width}", 1000)
-                        console.log(restaurantImgFinal);
+                            var restaurantImg;
 
-                        $("#restaurant-btn").attr("href", restaurantURL);
-                        $("#restaurant-title").text(restaurantName);
-                        $("#restaurant-about").text(restaurantAbout);
-                        $("#restaurant-img").attr("src", restaurantImgFinal);
 
-                    })
-                    .catch(err => console.error(err));
+                            if ('albumPhotos' in response3.data.AppPresentation_queryAppDetailV2[0].sections[0]) {
+                                restaurantImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
+                                var restaurantImgFinal = restaurantImg.replace("{width}", 1000);
+                                $("#restaurant-img").attr("src", restaurantImgFinal);
+                            }
+
+
+                            console.log(restaurantImgFinal);
+
+
+                            $("#restaurant-btn").attr("href", restaurantURL);
+                            $("#restaurant-title").text(restaurantName);
+                            $("#restaurant-about").text(restaurantAbout);
+                            // $("#restaurant-img").attr("src", restaurantImgFinal);
+
+                        })
+                        .catch(err => console.error(err));
+                }
+                if (geoID.length > 0 && restaurantID > 0) {
+                    setTimeout(fetchRestaurantDetails, 2000);
+                } else setTimeout(fetchRestaurantDetails, 2000);
             })
             .catch(err => console.error(err));
 
@@ -229,7 +248,7 @@ $.ajax(autoComplete).done(function (response1) {
 
     if (geoID.length > 0 && restaurantID > 0) {
         setTimeout(fetchRestaurant, 2000);
-    } else setTimeout(fetchRestaurant, 3000);
+    } else setTimeout(fetchRestaurant, 2000);
 
     // defines filters to use for the attraction list
     function fetchAttraction() {
@@ -266,56 +285,61 @@ $.ajax(autoComplete).done(function (response1) {
                     body: `{"contentId":"${attractionID}","startDate":"2023-06-30","endDate":"2023-07-01","pax":[{"ageBand":"ADULT","count":2}]}`
                 };
 
-                fetch('https://travel-advisor.p.rapidapi.com/attractions/v2/get-details?currency=USD&units=km&lang=en_US', attractionDetails)
-                    .then(response3 => response3.json())
-                    .then(response3 => {
+                function fetchAttractionDetails() {
+                    fetch('https://travel-advisor.p.rapidapi.com/attractions/v2/get-details?currency=USD&units=km&lang=en_US', attractionDetails)
+                        .then(response3 => response3.json())
+                        .then(response3 => {
 
-                        console.log("This is the output of attractions/v2/get-details:");
-                        console.log(response3);
-                        var attractionName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
-                        console.log(attractionName);
-                        var attractionURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
-                        console.log(attractionURL);
-                        var attractionAbout;
+                            console.log("This is the output of attractions/v2/get-details:");
+                            console.log(response3);
+                            var attractionName = response3.data.AppPresentation_queryAppDetailV2[0].container.navTitle;
+                            console.log(attractionName);
+                            var attractionURL = response3.data.AppPresentation_queryAppDetailV2[0].container.shareInfo.webUrl;
+                            console.log(attractionURL);
+                            var attractionAbout;
 
-                        // for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
-                        //     if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].__typename = "AppPresentation_PoiAbout") {
-                        //         if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
-                        //             attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
-                        //         } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
-                        //     } else attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
-                        // }
+                            // for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                            //     if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].__typename = "AppPresentation_PoiAbout") {
+                            //         if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                            //             attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                            //         } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                            //     } else attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                            // }
 
 
-                        for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
-                            if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
-                                if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
-                                    attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
-                                } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
-                            } 
-                        }
+                            for (i = 0; i < response3.data.AppPresentation_queryAppDetailV2[0].sections.length; i++) {
+                                if ('about' in response3.data.AppPresentation_queryAppDetailV2[0].sections[i]) {
+                                    if (response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == null || response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about == undefined) {
+                                        attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                                    } else attractionAbout = response3.data.AppPresentation_queryAppDetailV2[0].sections[i].about;
+                                }
+                            }
 
-                        if (attractionAbout === undefined || attractionAbout === null) {
-                            attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
-                        }
+                            if (attractionAbout === undefined || attractionAbout === null) {
+                                attractionAbout = (`You should definitely see this picturesque location in ${city}!`)
+                            }
 
-                        console.log(attractionAbout);
-                        var attractionImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
-                        var attractionImgFinal = attractionImg.replace("{width}", 1000)
-                        console.log(attractionImgFinal);
+                            console.log(attractionAbout);
+                            var attractionImg = response3.data.AppPresentation_queryAppDetailV2[0].sections[0].albumPhotos[0].data.photoSizeDynamic.urlTemplate;
+                            var attractionImgFinal = attractionImg.replace("{width}", 1000)
+                            console.log(attractionImgFinal);
 
-                        $("#attraction-btn").attr("href", attractionURL);
-                        $("#attraction-title").text(attractionName);
-                        $("#attraction-about").text(attractionAbout);
-                        $("#attraction-img").attr("src", attractionImgFinal);
-                    })
-                    .catch(err => console.error(err));
+                            $("#attraction-btn").attr("href", attractionURL);
+                            $("#attraction-title").text(attractionName);
+                            $("#attraction-about").text(attractionAbout);
+                            $("#attraction-img").attr("src", attractionImgFinal);
+                        })
+                        .catch(err => console.error(err));
+                }
+                if (geoID.length > 0 && attractionID > 0) {
+                    setTimeout(fetchAttractionDetails, 1000);
+                } else setTimeout(fetchAttractionDetails, 3000);
             })
             .catch(err => console.error(err));
 
     }
 
-    if (geoID.length > 0 && restaurantID > 0) {
+    if (geoID.length > 0 && attractionID > 0) {
         setTimeout(fetchAttraction, 1000);
     } else setTimeout(fetchAttraction, 3000);
 

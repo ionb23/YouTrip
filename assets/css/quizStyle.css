@@ -3,20 +3,20 @@
     --main-color: #0081A7;
     --second-color: #b8d5b8;
     --text-high-color: #FDFCDC;
-    --logo-color:#F67167;
+    --logo-color: #F67167;
 }
 
 @keyframes animate-pop {
     0% {
-      opacity: 0;
-      transform: scale(0.5, 0.5);
+        opacity: 0;
+        transform: scale(0.5, 0.5);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: scale(1, 1);
+        opacity: 1;
+        transform: scale(1, 1);
     }
-  }
+}
 
 /*copied navbar*/
 a {
@@ -36,6 +36,7 @@ body {
     padding: 0 55px;
 
 }
+
 .main-nav {
     font-family: 'Pacifico', sans-serif;
     font-weight: 600;
@@ -44,11 +45,13 @@ body {
     text-shadow: 2px 2px black;
     margin-left: 40px;
 }
+
 #navbarNav {
     justify-content: flex-end;
     margin-right: 20px;
     padding-bottom: 5px;
 }
+
 #navbarNav a {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-transform: uppercase;
@@ -57,43 +60,103 @@ body {
     letter-spacing: 5px;
     color: black !important;
 }
+
 #navbarNav a:hover {
     color: var(--logo-color) !important;
 }
+
 .nav-item {
     padding: 0 15px;
+}
+
+#aboutModal,
+#subscribeModal {
+    text-align: center;
+
+}
+
+.modal-nav:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.modal-dialog-nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal-title-nav {
+    text-align: center;
+    font-family: 'Pacifico', sans-serif;
+    margin: 0 auto;
+    font-size: 50px;
+}
+
+.modal-content-nav {
+    background-color: #b8d5b8
+}
+
+.modal-body-nav p {
+    font-size: 1rem;
+}
+
+/* Sets fonts for and colour for subscribe modal */
+
+#email-label {
+    font-family: 'Pacifico', sans-serif;
+}
+
+.subscribe-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-button {
+    background-color: #F67167;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 5px #00000030;
 }
 
 .hide {
     display: none;
 }
-#checkboxes{
+
+#checkboxes {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
     background-color: var(--second-color);
-    
+
 }
-h2{
+
+h2 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 4rem;
     letter-spacing: 5px;
 }
-h3{
-    color:var(--text-high-color);
+
+h3 {
+    color: var(--text-high-color);
     font-weight: bolder;
 }
-p{
+
+p {
     font-size: xx-large;
 }
-.check{
-padding:0.5%;
+
+.check {
+    padding: 0.5%;
 }
-#bottomQ{
-   margin-top:2%;
-border-top: 6px double black;
+
+#bottomQ {
+    margin-top: 2%;
+    border-top: 6px double black;
 }
+
 #checkBtn {
     margin-top: 30px;
     padding: 10px 30px;
@@ -102,55 +165,63 @@ border-top: 6px double black;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 150%;
-    box-shadow: 0 2px 10px #00000055; 
+    box-shadow: 0 2px 10px #00000055;
     /* transition: all 0.3s ease-in-out; */
 }
-#checkBtn:hover{
+
+#checkBtn:hover {
     background-color: var(--main-color);
     transform: scale(1.25) perspective(1px);
 }
-.outerCard{
+
+.outerCard {
     background-color: var(--main-color);
-    color:var(--second-color) ;
+    color: var(--second-color);
     height: 70vh;
     width: 35vw;
     animation-duration: 0.7s;
     animation-name: animate-pop;
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
 }
-h5{
-    font-size: 2rem;;
+
+h5 {
+    font-size: 2rem;
+    ;
 }
-.questionPicture{
-    width:100%;
+
+.questionPicture {
+    width: 100%;
     height: 40%;
-    border-bottom: solid 2px var(--text-high-color)
-    f
+    border-bottom: solid 2px var(--text-high-color) f
 }
-.answ{
-    display:block;
+
+.answ {
+    display: block;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 1.4rem;
     text-transform: uppercase;
-    color:Black;
+    color: Black;
     width: 50%;
     background-color: var(--second-color);
-    border:black 2px solid; 
-    margin-left: 25% !important ;
+    border: black 2px solid;
+    margin-left: 25% !important;
     box-shadow: 0 2px 10px #00000055;
-   
-   /* animation-duration: 0.5s;
+
+    /* animation-duration: 0.5s;
     animation-name: animate-pop;
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);*/
 }
-.modal-content{
-    background-color: var(--main-color) ;
-    color:var(--second-color);
-}      
-.modal-body{
-    color:var(--text-high-color)
+
+.modal-content-error {
+    background-color: var(--main-color);
+    color: var(--second-color);
 }
-.modal-btn{
+
+.modal-body-error {
+    color: var(--text-high-color)
+}
+
+.modal-btn-error {
     padding: 10px 30px;
     color: white;
     background-color: #F67167;
@@ -159,48 +230,63 @@ h5{
     font-size: 90%;
     box-shadow: 0 2px 10px #00000055;
 }
-.answ:hover{
+
+.answ:hover {
     background-color: #F67167;
     transform: scale(1.25) perspective(1px);
 }
-@media (max-width: 977px ){
-    .main-nav{
-     text-align:center;
-    }
-#checkboxes{
-    width:90%;
-    padding:1% !important;
-}
-.check{
-    border-bottom: 2px solid black;
-    border-right:1px solid black;
-    /*border-radius:5px;*/
-    margin:1%;
-}
-.card{
-    width: 60% !important;
+
+.personalSituation {
+    padding-top: 20px !important;
 }
 
-} 
-@media (max-width: 500px ) {
-    .main-nav{
-        margin-left:0;
-        margin-right:10px;
+
+@media (max-width: 977px) {
+    .main-nav {
+        text-align: center;
     }
- 
- 
-   #quiz{
-    width: 100%;
-   }
-   .card{
-    margin:15% 1% !important; 
-    width:100% !important;
-   }
-   .answ{
-    width:80%;
-    margin-left:10% !important;
-   }
-   .answ:hover{
-    background-color: #F67167;}
+
+    #checkboxes {
+        width: 90%;
+        padding: 1% !important;
+    }
+
+    .check {
+        border-bottom: 2px solid black;
+        border-right: 1px solid black;
+        /*border-radius:5px;*/
+        margin: 1%;
+    }
+
+    .card {
+        width: 60% !important;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .main-nav {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+
+    #quiz {
+        width: 100%;
+    }
+
+    .card {
+        margin: 15% 1% !important;
+        width: 100% !important;
+    }
+
+    .answ {
+        width: 80%;
+        margin-left: 10% !important;
+    }
+
+    .answ:hover {
+        background-color: #F67167;
+    }
 
 }

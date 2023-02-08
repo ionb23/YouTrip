@@ -1,57 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="./assets/css/suggestions.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./assets/css/suggestions.css">
 
 
     <title>Test website</title>
 </head>
 
 <body>
+
+    <!-- Navbar html element -->
+
     <nav class="navbar navbar-expand-lg" id="navbar">
         <a class="navbar-brand main-nav" href="index.html">
-            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt=""> -->
-            Personal Holidays
+            YouTrip
         </a>
+
+        <!-- Toggles at lower pixel widths -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active" id="home-nav">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                <li class="nav-item" id="about-nav">
+                    <a class="nav-link" href="#" data-target="#aboutModal" data-toggle="modal">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Suggestions</a>
+                <li class="nav-item" id="suggestions-nav">
+                    <a class="nav-link" href="suggestions.html">Suggestions</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log-in</a>
+                <li class="nav-item" id="login-nav">
+                    <a class="nav-link" data-target="#subscribeModal" data-toggle="modal" href="#">Subscribe</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <!-- About Modal -->
+    <div class="modal fade modal-nav" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-nav">
+            <div class="modal-content modal-content-nav">
+                <div class="modal-header modal-header-nav">
+                    <h4 class="modal-title modal-title-nav" id="exampleModalLabel">About us</h4>
+                </div>
+                <div class="modal-body modal-body-nav">
+                    <h5> Welcome to YouTrip! </h5>
+                    <p>If you're looking for a holiday perfect for your character and interests, you've come to the
+                        right place.</p>
+                    <p>Established in 2022 by a small team of developers, our service will help you
+                        to determine your personality type, and give you travel suggestions that match it perfectly. If
+                        you're looking for an adventure and are an outgoing personality, find a city break in some of
+                        the world's nighlife capitals. Or are you aiming to find a getaway that will help you to get
+                        some much-needed relaxation? You may find yourself in the Pico de Orizaba mountains, or
+                        sunbathing on a beach in Turkey. The possibilities are endless!</p>
+                    <h6>Take the quiz to get started on your journey!</h6>
+                </div>
+                <div class="modal-footer modal-footer-nav">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SUBSCRIBE MODAL -->
+
+    <div class="modal fade modal-nav" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-nav">
+            <div class="modal-content modal-content-nav">
+                <div class="modal-header modal-header-nav">
+                    <h4 class="modal-title modal-title-nav">Subscribe</h4>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body modal-body-nav">
+                    <h5>Get onboard!</h5>
+                    <p>Subscribe below to get updates on new holiday destinations, and to return to your suggestions.
+                    </p>
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label" id="email-label">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="david.attenborough@gmail.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-nav subscribe-footer">
+                    <button type="submit" class="btn subscribe-button" data-dismiss="modal">Submit</button>
+                    <button type="button" class="btn subscribe-button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="container-fluid" id="resultsdiv">
@@ -69,23 +130,23 @@
                 </div>
                 <a href="#" id="attraction-btn">Go to Attraction</a>
             </div>
-            
-            <div class="card m-4 suggestion-card" id="hotel"style="width: 18rem;">
+
+            <div class="card m-4 suggestion-card" id="hotel" style="width: 18rem;">
                 <img src="..." class="card-img-top" id="hotel-img" alt="..." style="height: 35%;">
                 <div class="card-body">
-           
+
                     <h5 class="card-title" id="hotel-title">Hotel example</h5>
                     <p class="card-text" id="hotel-about"></p>
                 </div>
                 <a href="#" id="hotel-btn">Go to Hotel</a>
             </div>
-            <div class="card m-4 suggestion-card" id="restaurant" style="width: 18rem;" >
-                <img src="..." class="card-img-top" id="restaurant-img" alt="..." style="height: 35%;">
+            <div class="card m-4 suggestion-card" id="restaurant" style="width: 18rem;">
+                <img src="assets/images/demo-images/restaurant-demo-img.jpg" class="card-img-top" id="restaurant-img" alt="..." style="height: 35%;">
                 <div class="card-body">
-                   
+
                     <h5 class="card-title" id="restaurant-title">Restaurant example</h5>
                     <p class="card-text" id="restaurant-about"></p>
-                  
+
                 </div>
                 <a href="#" id="restaurant-btn">Go to Restaurant</a>
             </div>
@@ -101,7 +162,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="./assets/js/outcomeObject.js"></script>    
+    <script src="./assets/js/outcomeObject.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/keys.js"></script>
     <script type="text/javascript" src="assets/js/suggestions.js"></script>
