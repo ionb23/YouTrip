@@ -163,11 +163,12 @@ body {
 }
 .resultsCards{
     background:var(--main-color);
-    padding:2%;
+    padding:1%;
  
 }
 .suggestion-card{
     max-height:50vh;
+    width:30%;
     background-color: var(--text-high-color);
     -webkit-box-shadow: 5px 5px 13px 0px rgba(0,0,0,0.44); 
     box-shadow: 5px 5px 13px 0px rgba(0,0,0,0.44);
