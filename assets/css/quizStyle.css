@@ -176,7 +176,7 @@ p {
 .outerCard {
     background-color: var(--main-color);
     color: var(--second-color);
-    height: 70vh;
+    height: 80vh;
     width: 35vw;
     animation-duration: 0.7s;
     animation-name: animate-pop; /*added animated effect for quiz card question to make bette website 'feel*/
