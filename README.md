@@ -48,6 +48,18 @@ On this site we can find dynamically appearing results of the test and quiz in t
 - Travel Advisor API : Especially challenging one out of free easily available apis, in Jquery 7 different calls are used to get information needed and for loop is needed to assure there are no empty reuslt.
 - Local storage  
 
+## Mobile view
+Our website is phone friendly,
+- Main page on phone view
+![Main page Mobile](assets/images/demo-images/main-mobile.jpg)
+-Quiz page
+![Quiz phase 1](assets/images/demo-images/test-mobile.jpg)
+![Quiz phase 2](assets/images/demo-images/quiz-mobile.jpg)
+- Suggestions page
+![Suggestion top](assets/images/demo-images/results-mobile.jpg)
+![Suggestion](assets/images/demo-images/suggestion-mobile.jpg)
+- Mobile drop-dow menu
+![menu](assets/images/demo-images/drop-down-menu.jpg)
 ## Credits
 On this project we contributed as a group of developers.
 ### Elijah Wilsher
@@ -62,8 +74,8 @@ Contributed by :
 - Creating Google Drive to share ideas and sources
 ### Fran Rechkova
 Contributed by:
-- Creating Quiz Page (quiz logic and local storage)
-- Styling suggestiion page
+- Creating Quiz Page (quiz logic JS and local storage)
+- Styling suggestiion page, media querries
 - ReadME text
 
 
