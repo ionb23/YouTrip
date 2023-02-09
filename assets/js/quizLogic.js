@@ -48,7 +48,7 @@ answC:{
 picture: 'assets/images/quiz-images/food.jpg',
 },
 //
-{ question: 'What type of music do you like?',
+{ question: 'What music do you like?',
 answA: {
     answ: 'pop/disco',
     addTo: 'culture'
@@ -80,7 +80,7 @@ answC:{
 picture: 'assets/images/quiz-images/drink.jpg',
 },
 //
-{ question: 'What kind of books do you like?',
+{ question: 'What books do you like?',
 answA: {
     answ: 'romantic',
     addTo: 'nature'
