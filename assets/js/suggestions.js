@@ -7,7 +7,7 @@ getCountry();
 findHolidays();
 
 function getCountry() {
-
+//after answering questions in the quiz the ruslt is array os possible country choices, this function pics one to display
     let placeArray = JSON.parse(localStorage.getItem('Destination'));
     if (placeArray.length == 0) {
         return
@@ -20,6 +20,7 @@ let theCountry = '' //this will be randomly chosen out of array of possible coun
 
 
 function findHolidays() {
+    //this function matches the personality type and holiday and creates text to be added on the website
     for (let i = 0; i < outcomes.length; i++) {
         if (outcomes[i].name == theChoice) {
             city = outcomes[i].places[personality][0]
@@ -39,6 +40,7 @@ let hotelID;
 let restaurantID;
 let attractionID;
 
+const apiKeyTravelAdvisor = '1543a61f73msh4be7f0c4722fae6p15f9c6jsnb197362fcbab'
 // let geoIDToSearch = 0;
 // let geoIDToSearch = 187497;
 
@@ -153,8 +155,9 @@ $.ajax(autoComplete).done(function (response1) {
         setTimeout(fetchHotel, 1000);
     } else setTimeout(fetchHotel, 3000);
 
-    // defines filters to use for the restaurant list
 
+
+    // defines filters to use for the restaurant list
     function fetchRestaurant() {
 
         const restaurantList = {

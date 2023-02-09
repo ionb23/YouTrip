@@ -243,6 +243,7 @@ h5 {
     color:black;
 }
 
+/*media querries tablets*/
 @media (max-width: 977px) {
     .main-nav {
         text-align: center;
@@ -267,7 +268,7 @@ h5 {
 
 
 }
-
+/*media querries phones*/
 @media (max-width: 500px) {
 
     #navbarNav {

@@ -5,7 +5,7 @@
     --text-high-color: #FDFCDC;
     --logo-color:#F67167;
 }
-
+/*start and end points for actions in animation. */
 @keyframes animate-glow {
     0% {
       opacity: 0;
@@ -116,6 +116,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0 0 5px #00000030;
 }
+/*here all the styles copied from main style end*/
 
 #chosen-holiday{
     background-color: var(--second-color);
@@ -126,6 +127,7 @@ body {
 #resultsdiv{
     width:70%;
 }
+
 #results-title{
     animation-duration: 1s;
     animation-name: animate-fade;
@@ -177,7 +179,7 @@ body {
     animation-name: animate-glow;
     animation-timing-function: ease;
     overflow-x: hidden;
-}
+}/*animated creating of the card*/
 .card-body{
     overflow:scroll;
     overflow-x: hidden;
@@ -194,14 +196,14 @@ body {
   }
 
 
-#attraction{
-animation-delay: 1.9s;
+#attraction{/*adding delays so hopefully api will be in place*/
+animation-delay: 4.9s;
 }
 #hotel{
-animation-delay: 2.4s ;
+animation-delay: 5.4s ;
 }
 #restaurant{
-animation-delay: 2.9s;
+animation-delay: 5.9s;
 }
 #hotel-btn ,#attraction-btn , #restaurant-btn{
     background-color: #F67167;
@@ -270,6 +272,7 @@ footer {
     text-decoration: none;
     text-align: center;
 }
+/*media querries tablet*/
 @media (max-width:1190px){
     #resultsdiv{
         width:100% !important;
@@ -282,6 +285,7 @@ footer {
     }
 
 }
+/*media querries phone*/
 @media(max-width:500px){
     #navbarNav {
         z-index:100;

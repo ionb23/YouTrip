@@ -1,38 +1,38 @@
 //starts with an array of quiz questions --possibly will create new script for that
 const askThis = [
-    { question: 'What is your favourite movie?',
+    { question: 'Which movie is the best?',
         answA: {
             answ: 'Lord of the Rings',
             addTo: 'nature'
         },
         answB: {
-            answ: 'Historical Movie',
+            answ: 'Dunkirk',
             addTo: 'history',
         },
         answC:{
-            answ: 'scifi, marvel, action',
+            answ: 'Avengers',
             addTo: 'culture',
         },
     picture: 'assets/images/quiz-images/movies.jpg',
     },
     //
-    { question: 'What is your favourite season',
+    { question: 'What is your favourite season?',
     answA: {
-        answ: 'spring or autumn',
+        answ: 'Spring or autumn',
         addTo: 'history',
     },
     answB: {
-        answ: 'winter',
+        answ: 'Winter',
         addTo: 'nature'
     },
     answC:{
-        answ: 'summer',
+        answ: 'Summer',
         addTo: 'culture'
     },
     picture: 'assets/images/quiz-images/season.jpg',
 },
 //
-{ question: 'What is your favourite food?',
+{ question: 'How do you like your food?',
 answA: {
     answ: 'Spicy',
     addTo: 'culture'
@@ -74,13 +74,13 @@ answB: {
     addTo: 'history',
 },
 answC:{
-    answ: 'pop',
+    answ: 'pop/soda',
     addTo: 'culture',
 },
 picture: 'assets/images/quiz-images/drink.jpg',
 },
 //
-{ question: 'What is your favourite book?',
+{ question: 'What kind of books do you like?',
 answA: {
     answ: 'romantic',
     addTo: 'nature'
@@ -96,7 +96,7 @@ answC:{
 picture: 'assets/images/quiz-images/books.jpg',
 },
 //
-{ question: 'Whats your style',
+{ question: 'Whats your style?',
 answA: {
     answ: 'formal',
     addTo: 'history',
@@ -230,6 +230,8 @@ function quizQuestions (order){
     quiz.empty();
     let currentPic = askThis[order].picture
     quiz.removeClass('hide')
+    
+    //creating html element to put
     let questionCard =$('<div>');
 
     questionCard.addClass('card m-5 outerCard rounded d-flex')
@@ -251,7 +253,7 @@ function quizQuestions (order){
     let answerThree = $('<button>')
     answerThree.addClass('btn m-3 answ').attr('id',askThis[order].answC.addTo).text(askThis[order].answC.answ).css('display','block')
 
-// orderOfQuestion shows the order of each question
+// orderOfQuestion shows the order of each question in the quiz card
     cardBody.append(orderOfQuestion, question, answerOne, answerTwo, answerThree)
     questionCard.append(picture, cardBody)
 
