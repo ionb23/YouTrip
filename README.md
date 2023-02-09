@@ -5,7 +5,7 @@ Find out what holidays you need!
 
 This is an interactive website which encourages user to pick and go on holidays based on the personality type assesment.
 ## Website link
-[HERE](https://ionb23.github.io/personalised-holiday-planner/) You can visit our deployed application.
+[HERE](https://ionb23.github.io/YouTrip/) You can visit our deployed application.
 
 ## Usage
 Browse the main page, read the About section, subscribe to the newsletter, click on take the quiz button.
