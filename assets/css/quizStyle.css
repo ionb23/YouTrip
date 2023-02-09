@@ -255,8 +255,8 @@ h5 {
     }
 
     .check {
-        border-bottom: 2px solid black;
-        border-right: 1px solid black;
+        border-bottom: 2px solid var(--text-high-color);
+        border-right: 1px solid var(--text-high-color);
         /*border-radius:5px;*/
         margin: 1%;
     }
@@ -265,7 +265,11 @@ h5 {
         width: 60% !important;
         height: fit-content !important;
     }
-
+.answer {
+    border-bottom:1px solid var(--text-high-color);
+    border-right: 2px solid var(--text-high-color);
+    margin-top: 2%;;
+}
 
 }
 /*media querries phones*/

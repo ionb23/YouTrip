@@ -288,7 +288,6 @@ footer {
 /*media querries phone*/
 @media(max-width:500px){
     #navbarNav {
-        z-index:100;
         background-color: var(--main-color);
         margin-top:1%;
         border: double 2px var(--logo-color);
@@ -299,16 +298,16 @@ footer {
     }
     #resultsdiv{
         margin-top:20% !important;
-        width:100% !important;
+        width:100vw !important;
         padding:0 !important;
-        margin-left:8px !important;
+        margin-left:0px !important;
     }
     .suggestion-card{
         max-height:80vh;
     }
     #icons-footer {
-        display:block;
-        margin-right: -25%;
+        display: inline;
+        margin-right: -15%;
     }
     .footer-title {
         color: white !important;
@@ -316,7 +315,18 @@ footer {
         margin-left:0;
     }
     #footer{
+        justify-content: flex-start;
         margin-top:10%;
+        width:100%;
+    }
+    .resultsCards{
+        background:var(--main-color);
+        width:104vw;
+     
+    }
+    .footer-info {
+        text-align: left;
+        left: 60%;
     }
 
 }
