@@ -50,16 +50,13 @@ On this site we can find dynamically appearing results of the test and quiz in t
 
 ## Mobile view
 Our website is phone friendly,
-- Main page on phone view
-![Main page Mobile](assets/images/demo-images/main-mobile.jpg)
--Quiz page
-![Quiz phase 1](assets/images/demo-images/test-mobile.jpg)
-![Quiz phase 2](assets/images/demo-images/quiz-mobile.jpg)
-- Suggestions page
-![Suggestion top](assets/images/demo-images/results-mobile.jpg)
+
+- ![Main page Mobile](assets/images/demo-images/main-mobile.jpg)
+- ![Quiz phase 1](assets/images/demo-images/test-mobile.jpg)
+ ![Quiz phase 2](assets/images/demo-images/quiz-mobile.jpg)
+- ![Suggestion top](assets/images/demo-images/results-mobile.jpg) 
 ![Suggestion](assets/images/demo-images/suggestion-mobile.jpg)
-- Mobile drop-dow menu
-![menu](assets/images/demo-images/drop-down-menu.jpg)
+- ![menu](assets/images/demo-images/drop-down-menu.jpg)
 ## Credits
 On this project we contributed as a group of developers.
 ### Elijah Wilsher
