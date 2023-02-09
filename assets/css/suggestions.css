@@ -231,12 +231,15 @@ animation-delay: 5.9s;
 /* Styles for footer at base of page */
 
 
-footer {
+#footer {
     background-color: #107392;
     color: #FFFFFF;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
+    width:100vw;
+    margin-top: 10%;
+
 }
 
 .footer-title {

@@ -393,7 +393,7 @@ footer {
     
     
 
-    footer {
+    #footer {
         justify-content: center;
         position: relative;
         height:15vh !important;
