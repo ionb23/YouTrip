@@ -64,6 +64,6 @@ Contributed by :
 Contributed by:
 - Creating Quiz Page (quiz logic and local storage)
 - Styling suggestiion page
-
+- ReadME text
 
 
