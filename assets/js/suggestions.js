@@ -40,7 +40,7 @@ let hotelID;
 let restaurantID;
 let attractionID;
 
-const apiKeyTravelAdvisor = '1543a61f73msh4be7f0c4722fae6p15f9c6jsnb197362fcbab'
+const apiKeyTravelAdvisor = '536ff355c8mshd9ba3e88969d743p1bde80jsn7f1737cb1dca'
 // let geoIDToSearch = 0;
 // let geoIDToSearch = 187497;
 
